@@ -50,7 +50,10 @@ const generateCards = (album) => {
             <h6 class="card-title"><a class="text-decoration-none text-white" href="album.html?albumId=${el.album.id}">${el.album.title}</a></h6>
             </div>
             <div>
-            <p class="card-text"> <a class="text-white" href="artist.html?artistId=${el.artist.id}">${el.artist.name}</a></p>
+          <p class="card-text">
+            <a class="text-decoration-none" href="artist.html?artistId=${el.artist.id}" style="font-size: 0.7rem; color: #808080;">${el.artist.name}</a>
+          </p>
+
             
             </div>
             

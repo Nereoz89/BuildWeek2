@@ -1,3 +1,5 @@
+/* Regole generali */
+
 @font-face {
   font-family: "Circular";
   src: url("/assets/fonts/CircularStd-Regular.otf") format("opentype");
@@ -24,6 +26,8 @@
   color: rgb(224, 224, 224);
 }
 
+/* Scrollbar primo e secondo blocco*/
+
 #sideList {
   height: 50vh;
   overflow-y: auto;
@@ -47,4 +51,14 @@
 #mainDiv {
   height: 100vh;
   overflow-y: auto;
+}
+
+/* Blocco centrale */
+div > h5 {
+  font-size: 2.5em;
+}
+
+.viewAll {
+  font-size: 0.7em;
+  font-weight: bold;
 }
