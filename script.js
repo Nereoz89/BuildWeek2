@@ -32,9 +32,18 @@ const generateCards = (album) => {
   album.data.forEach((el, index) => {
     if (index < 15) {
       const newCol = document.createElement("div");
-      newCol.classList.add("col", "my-2", "p-1", "d-flex", "justify-content-center");
+      newCol.classList.add(
+        "col-12",
+        "col-sm-6",
+        "col-md-4",
+        "col-lg-2",
+        "my-2",
+        "p-1",
+        "d-flex",
+        "justify-content-center"
+      );
       newCol.innerHTML = `
-    <div class="card h-100 border-0 p-2 bg-dark" style="width: 10rem;">
+    <div class="card h-100 border-0 p-3" style="width: 10rem; background-color: #161616;">
         <img src="${el.album.cover_big}" class="card-img-top img-fluid" alt="img-${index}">
         <div class="card-body d-flex flex-column justify-content-between px-0">
             <div>
