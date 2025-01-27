@@ -112,61 +112,73 @@
 
         <div class="col-7">
           <div class="d-flex justify-content-between align-items-center">
-            <div><i class="bi bi-arrow-left-circle-fill"></i><i class="bi bi-arrow-right-circle-fill"></i></div>
-            <div class="dropdown">
-              <img
-                src="https://plus.unsplash.com/premium_photo-1737659254856-bb79e14b3ea5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
-                alt="Lidia"
-                width="25"
-                height="25"
-                class="rounded-circle"
-              />
+            <div class="col-3 pt-3">
+              <i class="bi bi-arrow-left-circle-fill fs-3 me-3" style="color: black"></i>
+              <i class="bi bi-arrow-right-circle-fill fs-3" style="color: black"></i>
+            </div>
+            <div class="dropdown pt-3">
               <button
-                class="btn btn-secondary dropdown-toggle"
+                class="btn btn-secondary dropdown-toggle d-flex align-items-center rounded-pill"
                 type="button"
+                id="dropdownMenuButton"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                style="background-color: black; border: none"
               >
-                Dropdown button
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1737659254856-bb79e14b3ea5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
+                  alt="Lidia"
+                  width="25"
+                  height="25"
+                  class="rounded-circle me-2"
+                />
+                <span>Lidia Nautilus</span>
               </button>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </div>
           </div>
-          <div class="d-flex justify-content-between">
-            <div>
-              <img src="./assets/imgs/main/image-1.jpg" alt="Fedez" />
+          <div
+            class="d-flex justify-content-between bg-dark p-4 mt-3"
+            style="background: linear-gradient(to right, rgb(0, 0, 0), rgba(97, 97, 97, 0))"
+          >
+            <div class="w-25 h-25 overflow-hidden">
+              <img
+                src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg"
+                alt="Fedez"
+                class="w-100 h-100 object-cover"
+              />
             </div>
             <div>
               <p>Album</p>
-              <h1>VIOLA</h1>
-              <p>Fedez, Salmo</p>
-              <p>Ascolta il nuovo singolo</p>
+              <h1 class="display-3 fw-bold">VIOLA (feat. Salmo)</h1>
 
-              <button type="button" class="btn btn-success">Bottone</button>
-              <button type="button" class="btn btn-outline-secondary">Secondary</button>
-              <ul>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    fill="currentColor"
-                    class="bi bi-three-dots text-white"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-                    />
-                  </svg>
-                </li>
-              </ul>
+              <p>Fedez, Salmo</p>
+              <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
+              <button type="button" class="btn btn-success rounded-pill text-dark pt-1 pb-1 px-4 me-2">Play</button>
+              <button type="button" class="btn btn-outline-secondary rounded-pill text-white pt-1 pb-1 px-4 me-2">
+                Salva
+              </button>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  class="bi bi-three-dots text-white"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                  />
+                </svg>
+              </span>
             </div>
             <div>
-              <p>nascondi</p>
+              <p class="bg-dark text-white rounded-pill p-1 px-4">Nascondi Annunci</p>
             </div>
           </div>
           <h3>Buonasera</h3>
