@@ -1,7 +1,7 @@
 // RINTRACCIO LA ROW TARGET
 const myRow = document.getElementById("mainRow");
 
-const url = "https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem";
+const url = "https://deezerdevs-deezer.p.rapidapi.com/search?q=pink-floyd";
 const options = {
   method: "GET",
   headers: {
