@@ -1,10 +1,47 @@
+@font-face {
+  font-family: "Circular";
+  src: url("/assets/fonts/CircularStd-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("/assets/fonts/CircularStd-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("/assets/fonts/CircularStd-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 * {
+  font-family: "Circular", sans-serif;
   color: rgb(224, 224, 224);
 }
 
 #sideList {
   height: 50vh;
   overflow-y: auto;
+}
+
+#sideList::-webkit-scrollbar,
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+#sideList::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  background-color: rgb(148, 148, 148);
+}
+
+#sideList::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+  background-color: black;
 }
 
 #mainDiv {
