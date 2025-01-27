@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Spotify</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   </head>
   <body class="bg-dark text-white">
-    <div class="container-fluid">
+    <div class="container-fluid mt-2">
       <div class="row">
         <div class="col">
           <div>
             <ul class="nav flex-column">
-              <li class="nav-item d-flex align-items-center">
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-three-dots text-white" viewBox="0 0 16 16">
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+              </svg></li>
+              <li class="nav-item d-flex align-items-center">                
                 <span><i class="bi bi-house-door-fill"></i></span><a class="nav-link active" aria-current="page" href="#"> </i>Home</a>
               </li>
               <li class="nav-item d-flex align-items-center">
@@ -52,9 +55,44 @@
           </div>
         </div>
 
+        <div class="col">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>              
+              <i class="bi bi-arrow-left-circle-fill"></i><i class="bi bi-arrow-right-circle-fill"></i>              
+            </div>
+            <div class="dropdown">
+              <img src="https://plus.unsplash.com/premium_photo-1737659254856-bb79e14b3ea5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
+               alt="Lidia" width="25" height="25" class="rounded-circle">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </div>  
+          <div>
+            <img src="./assets/imgs/main/image-1.jpg" class="img-thumbnail" alt="Fedez">
+          </div>
+          <div>
+            <p>Album</p>
+            <h1>VIOLA</h1>
+            <p>Fedez, Salmo</p>
+            <p>Ascolta il nuovo singolo</p>
+            
+            <button type="button" class="btn btn-success">Bottone </button>
+            <button type="button" class="btn btn-outline-secondary">Secondary</button>
+              <ul>              
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-three-dots text-white" viewBox="0 0 16 16">
+                      <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                    </svg></li>  
+              </ul>
+          </div>               
+        </div>
         <div class="col"></div>
-        <div class="col"></div>
-      </div>
+        </div>
     </div>
 
     <script
