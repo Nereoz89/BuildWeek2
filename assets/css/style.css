@@ -64,7 +64,7 @@ div > h5 {
 }
 
 #play {
-  background-color: black;
+  /* background-color: black; */
   color: #1ed760;
   border: none;
   border-radius: 50%;
