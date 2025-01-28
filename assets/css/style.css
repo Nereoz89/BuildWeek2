@@ -64,6 +64,13 @@ div > h5 {
 }
 
 #play {
+  background-color: black;
+  color: #1ed760;
+  border: none;
+  border-radius: 50%;
+}
+
+#play {
   font-size: 3rem;
   color: #1fb74f;
 }
