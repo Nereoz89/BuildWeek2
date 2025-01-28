@@ -21,14 +21,16 @@ fetch(`${url}${albumId}`, options)
   .then((data) => {
     console.log(data);
     generateTracks(data);
+    generateDetails(data);
   })
   .catch((err) => {
     console.error(err.message);
   });
 
 const mainRow = document.getElementById("albumContent");
+const secondRow = document.getElementById("secondContent");
 
-// FUNCTION PER GENERARE LE TRACKS
+//  TRACKS
 const generateTracks = (tracks) => {
   tracks.tracks.data.forEach((el) => {
     let seconds = el.duration % 60;
@@ -61,4 +63,29 @@ const generateTracks = (tracks) => {
       `;
     mainRow.appendChild(content);
   });
+};
+
+//  ALBUM DETAILS
+const generateDetails = (details) => {
+  secondRow.innerHTML = `
+    <div class="d-flex justify-content-center mt-4">
+      <img src="${details.cover_big}" crossorigin="anonymous" alt="img" width="70%" id="myImg"/>
+    </div>
+    <div class="d-flex flex-column justify-content-end">
+      <h1 class="mt-4 fs-md-4">${details.title}</h1>
+      <div class="d-flex align-items-center">
+        <img
+          src="${details.artist.picture_big}"
+          width="10%"
+          class="rounded-5 me-2"
+          alt="img"
+        
+        <p class="ms-2 mb-0 d-flex align-items-center">${details.artist.name}</p>
+        <p class="ms-2 mb-0 d-flex align-items-center">${details.tracks.data.length} brani</p>
+        <p class="ms-2 mb-0 d-flex align-items-center">${Math.floor(details.duration / 60)}:${
+    details.duration % 60
+  } </p>
+      </div>
+    </div>
+    `;
 };
