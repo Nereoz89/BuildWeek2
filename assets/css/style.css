@@ -62,3 +62,10 @@ div > h5 {
   font-size: 0.7em;
   font-weight: bold;
 }
+
+#play {
+  background-color: black;
+  color: #1ed760;
+  border: none;
+  border-radius: 50%;
+}
