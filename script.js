@@ -43,7 +43,7 @@ const generateCards = (album) => {
         "justify-content-center"
       );
       newCol.innerHTML = `
-    <div class="card h-100 border-0 p-3" style="width: 10rem; background-color: #161616;">
+    <div class="card h-100 border-0 p-3"  background-color: #161616;">
         <img src="${el.album.cover_big}" class="card-img-top img-fluid" alt="img-${index}">
         <div class="card-body d-flex flex-column justify-content-between px-0">
             <div>
