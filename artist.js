@@ -1,6 +1,6 @@
 // URL dell'API per caricare i dati dell'album o della traccia
 const apiUrl = "https://deezerdevs-deezer.p.rapidapi.com/track/";
-const options = {
+const opzioni = {
   method: "GET",
   headers: {
     "x-rapidapi-key": "9ba868c2aamsh86144534c7b4d4ep186d15jsn6d3b9dfa1630",
@@ -75,7 +75,7 @@ const skipForward = () => {
 
 // Funzione per caricare i dati della traccia
 const loadTrack = (trackId) => {
-  fetch(`${apiUrl}${trackId}`, options)
+  fetch(`${apiUrl}${trackId}`, opzioni)
     .then((res) => res.json())
     .then((data) => {
       // Imposta il titolo della canzone, l'artista e la copertura
@@ -84,7 +84,7 @@ const loadTrack = (trackId) => {
       songCover.src = data.album.cover_medium;
 
       // Imposta l'audio e la durata totale della traccia
-      audio.src = data.preview;  // Usa il link del preview della traccia
+      audio.src = data.preview; // Usa il link del preview della traccia
       audio.addEventListener("loadedmetadata", () => {
         totalTimeElem.textContent = formatTime(audio.duration);
         progressBar.max = audio.duration;
