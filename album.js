@@ -71,14 +71,16 @@ const generateTracks = (tracks) => {
 //  ALBUM DETAILS
 const generateDetails = (details) => {
   secondRow.innerHTML = `
-  <div class="d-flex justify-content-between align-items-center mt-4">
-    <img src="${details.cover_big}" crossorigin="anonymous" alt="img" width="30%" class="shadow-lg" id="myImg"/>
-    <div class="d-flex flex-column ms-4">
-      <h1 class="mt-5" style="font-size: 3.5rem; font-weight: bold;">${details.title}</h1>
- <div class="d-flex align-items-center">
+  <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
+    <!-- Immagine più piccola su dispositivi più grandi -->
+    <img src="${details.cover_big}" crossorigin="anonymous" alt="img" 
+     class="shadow-lg mb-3 mb-md-0 img-responsive" />
+    <div class="d-flex flex-column ms-md-4">
+      <h1 class="mt-5 " style="font-size: 3rem; font-weight: bold;">${details.title}</h1>
+      <div class="d-flex align-items-center">
         <img src="${details.artist.picture_big}" width="5%" class="rounded-5 me-2" alt="img"/>
         <p class="ms-2 mb-0">${details.artist.name}</p>
-        <p class="ms-2 mb-0">${details.tracks.data.length} brani</p>
+        <p class="ms-2 mb-0 d-block d-md-inline">${details.tracks.data.length} brani</p>
         <p class="ms-2 mb-0">${Math.floor(details.duration / 60)}:${details.duration % 60}</p>
       </div>
     </div>
