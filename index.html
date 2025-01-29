@@ -24,7 +24,34 @@
   <body class="text-white">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-3 pt-3 ps-4" style="background-color: rgb(0, 0, 0)">
+        <!-- Navbar su dispositivi mobile -->
+        <div
+          class="d-block d-md-none position-fixed bottom-0 w-100"
+          style="z-index: 9999; background-color: rgba(0, 0, 0, 0.205); box-shadow: 0 4px 6px rgb(0, 0, 0)"
+        >
+          <ul class="nav justify-content-around">
+            <li class="nav-item text-center">
+              <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
+                <i class="bi bi-house-door-fill me-2 fs-3"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="nav-item text-center">
+              <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
+                <i class="bi bi-search me-2 fs-3"></i>
+                <span>Cerca</span>
+              </a>
+            </li>
+            <li class="nav-item text-center">
+              <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
+                <i class="bi bi-collection-fill me-2 fs-3"></i>
+                <span>La tua libreria</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-none d-md-block col-md-3 pt-3 ps-4 p-4" style="background-color: rgb(0, 0, 0)">
           <div>
             <ul class="nav flex-column">
               <li>
@@ -46,7 +73,7 @@
                 ><a class="nav-link active text-white fw-bold" aria-current="page" href="#"> Home</a>
               </li>
               <li class="nav-item d-flex align-items-center">
-                <span><i class="bi bi-search"></i></span><a class="nav-link text-white" href="#"> Crea</a>
+                <span><i class="bi bi-search"></i></span><a class="nav-link text-white" href="#"> Cerca</a>
               </li>
               <li class="nav-item d-flex align-items-center">
                 <span><i class="bi bi-collection-fill"></i></span
@@ -89,7 +116,6 @@
               <li class="mt-1 mb-1"><a href=""></a>𝙼𝚢 𝚆𝚘𝚛𝚕𝚍 ♡︎☁︎</li>
               <li class="mt-1 mb-1"><a href=""></a>Hi world ツ</li>
               <li class="mt-1 mb-1"><a href=""></a>★𝓓𝓪𝓻𝓴𝓢𝓽𝓪𝓻™★</li>
-              <li class="mt-1 mb-1"><a href=""></a>🆆🆁🅸🆃🅴 🅼🅴 🆂🅾🅼🅴🆃🅷🅸🅽🅶</li>
               <li class="mt-1 mb-1">
                 <a href=""></a>Let's fine something better to do 'cause i'm mentally exausted 🌍
               </li>
@@ -110,7 +136,6 @@
               <li class="mt-1 mb-1"><a href=""></a>𝙼𝚢 𝚆𝚘𝚛𝚕𝚍 ♡︎☁︎</li>
               <li class="mt-1 mb-1"><a href=""></a>Hi world ツ</li>
               <li class="mt-1 mb-1"><a href=""></a>★𝓓𝓪𝓻𝓴𝓢𝓽𝓪𝓻™★</li>
-              <li class="mt-1 mb-1"><a href=""></a>🆆🆁🅸🆃🅴 🅼🅴 🆂🅾🅼🅴🆃🅷🅸🅽🅶</li>
               <li class="mt-1 mb-1">
                 <a href=""></a>Let's fine something better to do 'cause i'm mentally exausted 🌍
               </li>
@@ -119,15 +144,16 @@
           </div>
         </div>
 
-        <div id="mainDiv" class="col-7" style="background: linear-gradient(to bottom, #252525, #121212)">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="col-3 pt-3">
+        <div id="mainDiv" class="col-12 col-md-7" style="background: linear-gradient(to bottom, #252525, #121212)">
+          <div class="d-none d-md-flex justify-content-between align-items-center">
+            <div class="col-3 pt-3 align-items-center">
               <i class="fas fa-chevron-circle-left fs-3 me-3" style="color: #000000"></i>
-              <i class="fas fa-chevron-circle-right fs-3 me-3" style="color: #000000"> </i>
+              <i class="fas fa-chevron-circle-right fs-3" style="color: #000000"></i>
             </div>
+
             <div class="dropdown pt-3">
               <button
-                class="btn btn-secondary dropdown-toggle d-flex align-items-center rounded-pill"
+                class="btn btn-sm btn-secondary dropdown-toggle d-flex align-items-center rounded-pill"
                 type="button"
                 id="dropdownMenuButton"
                 data-bs-toggle="dropdown"
@@ -150,54 +176,73 @@
               </ul>
             </div>
           </div>
-          <div
-            class="d-flex mt-3 mb-3"
-            style="
-              background: linear-gradient(to right, rgb(0, 0, 0), rgba(97, 97, 97, 0));
-              height: 15em;
-              box-sizing: border-box;
-            "
-          >
-            <div class="overflow-hidden" style="padding: 1em">
-              <img
-                src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg"
-                alt="Fedez"
-                class="object-cover"
-                style="max-width: 100%; height: 100%"
-              />
-            </div>
-            <div>
-              <p class="mt-2">ALBUM</p>
-              <h5 class="fw-bold">VIOLA (feat. Salmo)</h5>
 
-              <p>Fedez, Salmo</p>
-              <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
-              <button type="button" class="btn btn-success rounded-pill text-dark pt-1 pb-1 px-4 me-2">Play</button>
-              <button type="button" class="btn btn-outline-secondary rounded-pill text-white pt-1 pb-1 px-4 me-2">
-                Salva
-              </button>
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  fill="currentColor"
-                  class="bi bi-three-dots text-white"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-                  />
-                </svg>
-              </span>
-            </div>
-            <div style="margin-left: auto">
-              <p class="bg-dark text-white rounded-pill p-2 mt-3">Nascondi Annunci</p>
+          <div class="d-none d-md-block">
+            <div
+              class="d-flex mt-3 mb-3"
+              style="
+                background: linear-gradient(to right, rgb(0, 0, 0), rgba(97, 97, 97, 0));
+                height: 15em;
+                box-sizing: border-box;
+              "
+            >
+              <div class="overflow-hidden" style="padding: 1em">
+                <img
+                  src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg"
+                  alt="Fedez"
+                  class="img-fluid"
+                  style="object-fit: cover; width: 100%; height: 100%"
+                />
+              </div>
+              <div>
+                <p class="mt-2">ALBUM</p>
+                <h5 class="fw-bold">VIOLA (feat. Salmo)</h5>
+
+                <p>Fedez, Salmo</p>
+                <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
+                <button type="button" class="colorSpotifyBack btn rounded-pill text-dark px-4 p-2 me-2">Play</button>
+                <button type="button" class="btn btn-outline-secondary rounded-pill text-white px-4 p-2 me-2">
+                  Salva
+                </button>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    fill="currentColor"
+                    class="bi bi-three-dots text-white"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div style="margin-left: auto">
+                <p class="bg-dark text-white rounded-pill p-1 mt-3 px-4">Nascondi Annunci</p>
+              </div>
             </div>
           </div>
-          <h3>Buonasera</h3>
+          <!-- h3 mobile-->
+          <h3 class="pt-4 p-md-0 d-flex justify-content-between align-items-center fs-1 d-block d-md-none">
+            <span class="mb-4">Buonasera</span>
+            <div class="mb-4">
+              <i class="bi bi-bell ms-3 fs-2"></i>
+              <i class="bi bi-clock-history ms-3 fs-2"></i>
+              <i class="bi bi-gear ms-3 fs-2"></i>
+            </div>
+          </h3>
+          <!-- h3 per gli altri dispositivi-->
+          <h3 class="pt-3 p-md-0 d-none d-md-flex fs-4">Buonasera</h3>
+          <!-- Scitte visibili solo per mobile-->
+          <div class="text-start d-block d-md-none mb-4">
+            <h4 class="d-inline-block fs-6 bg-dark p-2 rounded-pill">Musica</h4>
+            <h4 class="d-inline-block fs-6 bg-dark p-2 ms-4 rounded-pill">Podcast e Show</h4>
+          </div>
+
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-3">
-            <div class="col">
+            <div class="col pt-0 ps-2">
               <div class="d-flex align-items-center p-0 rounded overflow-hidden" style="background-color: #2c2c2c">
                 <div>
                   <img src="./assets/imgs/main/image-1.jpg" alt="image1" width="70" height="70" />
@@ -207,7 +252,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col ps-2">
               <div class="d-flex align-items-center p-0 rounded overflow-hidden" style="background-color: #2c2c2c">
                 <div>
                   <img src="./assets/imgs/search/image-11.jpg" alt="image11" width="70" height="70" />
@@ -217,7 +262,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col pt-0 ps-2">
               <div class="d-flex align-items-center p-0 rounded overflow-hidden" style="background-color: #2c2c2c">
                 <div>
                   <img src="./assets/imgs/search/image-12.jpg" alt="image12" width="70" height="70" />
@@ -227,7 +272,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col pt-0 ps-2">
               <div class="d-flex align-items-center p-0 rounded overflow-hidden" style="background-color: #2c2c2c">
                 <div>
                   <img src="./assets/imgs/search/image-17.jpg" alt="image17" width="70" height="70" />
@@ -237,7 +282,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col pt-0 ps-2">
               <div class="d-flex align-items-center p-0 rounded overflow-hidden" style="background-color: #2c2c2c">
                 <div>
                   <img src="./assets/imgs/search/image-14.jpg" alt="image14" width="70" height="70" />
@@ -247,7 +292,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col pt-0 ps-2">
               <div class="d-flex align-items-center p-0 rounded overflow-hidden" style="background-color: #2c2c2c">
                 <div>
                   <img src="./assets/imgs/search/image-15.jpg" alt="image15" width="70" height="70" />
@@ -258,24 +303,23 @@
               </div>
             </div>
           </div>
-
-          <!-- altro di cio che ti piace -->
-          <!-- SEZIONE CON LE CARD DEI VARI ARTISTI E RELATIVI ALBUM *********-->
+          <!-- SEZIONE CARD DEI VARI ARTISTI -->
           <div class="d-flex align-items-center justify-content-between">
-            <h4 class="my-2">Altro di ciò che ti piace</h4>
-            <span class="viewAll">VISUALIZZA TUTTO</span>
+            <h4 class="my-2 d-none d-md-block">Altro di ciò che ti piace</h4>
+            <span class="viewAll d-none d-md-block">VISUALIZZA TUTTO</span>
           </div>
           <div class="row flex-wrap justify-content-center m-0 mb-5" id="mainRow">
             <!--  card -->
           </div>
         </div>
-        <div class="col-2" style="background-color: black">
+
+        <div class="d-none d-md-block col-md-2" style="background-color: black">
           <div class="mt-4">
             <div class="d-flex justify-content-between align-items-center">
-              <h4 class="text-white" style="font-size: 20px">Attività amici</h4>
-              <div>
-                <i class="bi bi-person-plus text-white me-3 fs-4" style="cursor: pointer"></i>
-                <i class="bi bi-x-circle text-white fs-4" style="cursor: pointer"></i>
+              <h4 class="text-white" style="font-size: 15px; margin-bottom: 0">Attività amici</h4>
+              <div class="d-flex align-items-center">
+                <i class="bi bi-person-plus text-white me-3 fs-5" style="cursor: pointer"></i>
+                <i class="bi bi-x text-white fs-5" style="cursor: pointer"></i>
               </div>
             </div>
 
@@ -284,8 +328,8 @@
                 <img
                   src="https://randomuser.me/api/portraits/men/1.jpg"
                   alt="Amico 1"
-                  width="40"
-                  height="40"
+                  width="20"
+                  height="20"
                   class="rounded-circle"
                 />
                 <div class="ms-2">
@@ -301,8 +345,8 @@
                 <img
                   src="https://randomuser.me/api/portraits/women/2.jpg"
                   alt="Amico 2"
-                  width="40"
-                  height="40"
+                  width="20"
+                  height="20"
                   class="rounded-circle"
                 />
                 <div class="ms-2">
@@ -318,8 +362,8 @@
                 <img
                   src="https://randomuser.me/api/portraits/men/3.jpg"
                   alt="Amico 3"
-                  width="40"
-                  height="40"
+                  width="20"
+                  height="20"
                   class="rounded-circle"
                 />
                 <div class="ms-2">
