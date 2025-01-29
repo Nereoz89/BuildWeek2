@@ -90,3 +90,7 @@ div > h5 {
 .me-3 {
   margin-right: 1rem;
 }
+
+#albumCard {
+  background-color: #161616;
+}
