@@ -99,139 +99,18 @@
         </div>
 
         <div id="mainDiv" class="col-7" style="background: linear-gradient(to bottom, #252525, #121212); padding: 20px">
-          <!-- Sezione Artista -->
-          <div
-            style="
-              background-image: url('https://images.squarespace-cdn.com/content/v1/633ca5b0779be916e13bb32c/6f14852e-8e26-4da6-a9f7-9d631e5ace4c/Yellowcard-band-concert-events-tickets.jpg');
-              background-size: cover;
-              background-position: center;
-              margin-bottom: 20px;
-              position: relative;
-              height: 375px;
-            "
-          >
-            <!-- Overlay scuro per migliorare la leggibilità del testo -->
-            <div
-              style="
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0.5);
-                border-radius: 10px;
-              "
-            ></div>
-
-            <!-- Contenuto Artista -->
-            <div
-              style="
-                position: relative;
-                z-index: 1;
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: left;
-                height: 100%;
-              "
-            >
-              <!-- Icona di verifica e testo -->
-              <div style="display: flex; align-items: left; margin-bottom: 10px">
-                <small style="color: white; font-size: 12px; margin-right: 5px">Artist Verification</small>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00bfff" viewBox="0 0 16 16">
-                  <path
-                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm3.36 5.28l-4.5 4.5a.75.75 0 0 1-1.06 0l-2-2a.75.75 0 0 1 1.06-1.06l1.47 1.47 3.94-3.94a.75.75 0 0 1 1.06 1.06z"
-                  />
-                </svg>
-              </div>
-              <!-- Nome Artista -->
-              <h1 style="font-size: 100px; margin: 5px 0; color: white">Yellowcard</h1>
-              <!-- Ascoltatori mensili -->
-              <p style="color: #b3b3b3; font-size: 14px">3,433,567 ascoltatori mensili</p>
-            </div>
-          </div>
+          <!-- Sezione dinamicamente popolata -->
+          <div class="container-fluid d-flex flex-column flex-md-row pb-3" id="secondContent"></div>
           <!-- Sezione icone -->
           <div class="d-flex justify-content-start align-items-center ms-3">
-            <i id="play" class="bi bi-play-circle-fill fs-1 me-4"></i>
+            <i class="colorSpotify bi bi-play-circle-fill fs-1 me-4"></i>
             <div class="border p-2 me-4">FOLLOWING</div>
             <i class="bi bi-three-dots"></i>
           </div>
 
           <!-- Sezione Canzoni -->
           <div style="display: flex; justify-content: space-between; margin-top: 20px">
-            <!-- Sezione Sinistra: Lista Canzoni -->
-            <div style="width: 60%">
-              <h3 style="padding: 20px; font-size: 20px; margin-bottom: 10px; color: white">Canzoni Popolari</h3>
-              <ol style="list-style-type: none; padding: 0">
-                <li style="display: flex; align-items: center; padding: 10px 0">
-                  <span style="color: white; width: 5%; text-align: center; font-size: 10px">1</span>
-                  <img
-                    src="assets/imgs/main/image-15.jpg"
-                    alt="Nome Canzone 1"
-                    style="width: 10%; height: auto; margin-right: 10px"
-                  />
-                  <span style="color: white; width: 40%; font-size: 10px">Ocean avenue</span>
-                  <div style="display: flex; justify-content: space-between; width: 45%">
-                    <span style="color: #b3b3b3; font-size: 10px">456,789 ascolti</span>
-                    <span style="color: #b3b3b3; font-size: 10px">3:45</span>
-                  </div>
-                </li>
-                <li style="display: flex; align-items: center; padding: 10px 0">
-                  <span style="color: white; width: 5%; text-align: center; font-size: 10px">2</span>
-                  <img
-                    src="assets/imgs/main/image-15.jpg"
-                    alt="Nome Canzone 2"
-                    style="width: 10%; height: auto; margin-right: 10px"
-                  />
-                  <span style="color: white; width: 40%; font-size: 10px">Only one</span>
-                  <div style="display: flex; justify-content: space-between; width: 45%">
-                    <span style="color: #b3b3b3; font-size: 10px">765,432 ascolti</span>
-                    <span style="color: #b3b3b3; font-size: 10px">4:12</span>
-                  </div>
-                </li>
-                <li style="display: flex; align-items: center; padding: 10px 0">
-                  <span style="color: white; width: 5%; text-align: center; font-size: 10px">3</span>
-                  <img
-                    src="assets/imgs/main/image-15.jpg"
-                    alt="Nome Canzone 3"
-                    style="width: 10%; height: auto; margin-right: 10px"
-                  />
-                  <span style="color: white; width: 40%; font-size: 10px">Breathing</span>
-                  <div style="display: flex; justify-content: space-between; width: 45%">
-                    <span style="color: #b3b3b3; font-size: 10px">654,321 ascolti</span>
-                    <span style="color: #b3b3b3; font-size: 10px">3:30</span>
-                  </div>
-                </li>
-                <li style="display: flex; align-items: center; padding: 10px 0">
-                  <span style="color: white; width: 5%; text-align: center; font-size: 10px">4</span>
-                  <img
-                    src="assets/imgs/main/image-15.jpg"
-                    alt="Nome Canzone 4"
-                    style="width: 10%; height: auto; margin-right: 10px"
-                  />
-                  <span style="color: white; width: 40%; font-size: 10px">Lights and sounds</span>
-                  <div style="display: flex; justify-content: space-between; width: 45%">
-                    <span style="color: #b3b3b3; font-size: 10px">543,210 ascolti</span>
-                    <span style="color: #b3b3b3; font-size: 10px">3:55</span>
-                  </div>
-                </li>
-                <li style="display: flex; align-items: center; padding: 10px 0">
-                  <span style="color: white; width: 5%; text-align: center; font-size: 10px">5</span>
-                  <img
-                    src="assets/imgs/main/image-15.jpg"
-                    alt="Nome Canzone 5"
-                    style="width: 10%; height: auto; margin-right: 10px"
-                  />
-                  <span style="color: white; width: 40%; font-size: 10px">Way away</span>
-                  <div style="display: flex; justify-content: space-between; width: 45%">
-                    <span style="color: #b3b3b3; font-size: 10px">432,109 ascolti</span>
-                    <span style="color: #b3b3b3; font-size: 10px">4:00</span>
-                  </div>
-                </li>
-              </ol>
-              <p style="color: #b3b3b3; cursor: pointer; margin-top: 10px">Visualizza altro</p>
-            </div>
+            <div class="row mt-4 align-items-center" id="albumContent"></div>
 
             <!-- Sezione Destra: Brani che ti piacciono -->
             <div style="width: 35%; padding: 20px; border-radius: 10px">
@@ -255,20 +134,19 @@
         <div class="col-2" style="background-color: black">
           <div class="mt-4">
             <div class="d-flex justify-content-between align-items-center">
-              <h4 class="text-white" style="font-size: 20px">Attività amici</h4>
-              <div>
-                <i class="bi bi-person-plus text-white me-3 fs-4" style="cursor: pointer"></i>
-                <i class="bi bi-x-circle text-white fs-4" style="cursor: pointer"></i>
+              <h4 class="text-white" style="font-size: 15px; margin-bottom: 0">Attività amici</h4>
+              <div class="d-flex align-items-center">
+                <i class="bi bi-person-plus text-white me-3 fs-5" style="cursor: pointer"></i>
+                <i class="bi bi-x text-white fs-5" style="cursor: pointer"></i>
               </div>
             </div>
-
             <div class="d-flex justify-content-between align-items-center mt-3">
               <div class="d-flex align-items-center w-100">
                 <img
                   src="https://randomuser.me/api/portraits/men/1.jpg"
                   alt="Amico 1"
-                  width="40"
-                  height="40"
+                  width="20"
+                  height="20"
                   class="rounded-circle"
                 />
                 <div class="ms-2">
@@ -284,8 +162,8 @@
                 <img
                   src="https://randomuser.me/api/portraits/women/2.jpg"
                   alt="Amico 2"
-                  width="40"
-                  height="40"
+                  width="20"
+                  height="20"
                   class="rounded-circle"
                 />
                 <div class="ms-2">
@@ -301,8 +179,8 @@
                 <img
                   src="https://randomuser.me/api/portraits/men/3.jpg"
                   alt="Amico 3"
-                  width="40"
-                  height="40"
+                  width="20"
+                  height="20"
                   class="rounded-circle"
                 />
                 <div class="ms-2">
@@ -316,7 +194,58 @@
         </div>
       </div>
     </div>
-
+    <footer class="music-player">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+          <!-- Info Canzone -->
+          <div class="song-info d-flex align-items-center">
+              <img src="cover.jpg" alt="Cover" class="song-cover">
+              <div class="song-details">
+                  <h6 class="song-title">Nome Canzone</h6>
+                  <p class="song-artist">Nome Artista</p>
+              </div>
+          </div>
+  
+          <!-- Controlli Player (centrati) -->
+          <div class="center-controls d-flex align-items-center justify-content-center">
+              <div class="player-controls-container">
+                  <div class="player-controls d-flex align-items-center justify-content-center">
+                      <button class="btn"><i class="bi bi-shuffle"></i></button>
+                      <button class="btn"><i class="bi bi-skip-start-fill"></i></button>
+                      <button class="btn play-btn"><i class="bi bi-play-circle-fill"></i></button>
+                      <button class="btn"><i class="bi bi-skip-end-fill"></i></button>
+                      <button class="btn"><i class="bi bi-repeat"></i></button>
+                  </div>
+                  <!-- Barra Avanzamento -->
+                  <div class="progress-container d-flex align-items-center">
+                      <span class="current-time">0:00</span>
+                      <input type="range" class="progress-bar" min="0" max="100" value="0">
+                      <span class="total-time">3:45</span>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Volume, Icone Extra e Ingrandimento -->
+          <div class="right-controls d-flex align-items-center">
+              <!-- Icone extra -->
+              <button class="btn"><i class="bi bi-pencil"></i></button>
+              <button class="btn"><i class="bi bi-list"></i></button>
+              <button class="btn"><i class="bi bi-pc-display"></i></button>
+              
+              <!-- Volume -->
+              <div class="volume-controls d-flex align-items-center">
+                  <button class="btn"><i class="bi bi-volume-up"></i></button>
+                  <input type="range" class="volume-slider">
+              </div>
+  
+              <!-- Ingrandimento -->
+              <button class="btn expand-btn"><i class="bi bi-arrows-angle-expand"></i></button>
+          </div>
+      </div>
+  </footer>
+  
+  
+  
+  
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
