@@ -1,89 +1,122 @@
-// Recupera l'ID dell'artista dai parametri dell'URL
-const urlParams = new URLSearchParams(window.location.search);
-const artistId = urlParams.get('artistId');
+// URL dell'API per caricare i dati dell'album o della traccia
+const apiUrl = "https://deezerdevs-deezer.p.rapidapi.com/track/";
+const options = {
+  method: "GET",
+  headers: {
+    "x-rapidapi-key": "9ba868c2aamsh86144534c7b4d4ep186d15jsn6d3b9dfa1630",
+    "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+  },
+};
 
-if (!artistId) {
-  console.error('Artist ID not found in URL');
-} else {
-  // Endpoint per i dettagli dell'artista
-  const artistUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`;
-  // Endpoint per le top tracce dell'artista
-  const topTracksUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=50`;
-  // Endpoint per gli album dell'artista
-  const albumsUrl = `https://deezerdevs-deezer.p.rapidapi.com/artist/${artistId}/albums`;
+// Ottieni l'ID della traccia dalla query string
+const trackId = new URLSearchParams(window.location.search).get("trackId");
 
-  // Funzione per fetchare i dati
-  const fetchData = async (url) => {
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return await response.json();
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
+// Riferimento agli elementi del player
+const songTitle = document.querySelector(".song-title");
+const songArtist = document.querySelector(".song-artist");
+const songCover = document.querySelector(".song-cover");
+const playButton = document.querySelector(".play-btn");
+const progressBar = document.querySelector(".progress-bar");
+const currentTimeElem = document.querySelector(".current-time");
+const totalTimeElem = document.querySelector(".total-time");
+const volumeSlider = document.querySelector(".volume-slider");
+const skipBackButton = document.querySelector(".bi-skip-start-fill");
+const skipForwardButton = document.querySelector(".bi-skip-end-fill");
 
-  // Funzione per visualizzare i dettagli dell'artista
-  const displayArtistDetails = (artist) => {
-    const artistDetails = document.getElementById('artistDetails');
-    artistDetails.innerHTML = `
-      <div class="d-flex align-items-center">
-        <img src="${artist.picture_big}" alt="${artist.name}" class="rounded-circle" width="150" height="150">
-        <div class="ms-4">
-          <h1>${artist.name}</h1>
-          <p>Fans: ${artist.nb_fan}</p>
-        </div>
-      </div>
-    `;
-  };
+// Variabili di controllo
+let isPlaying = false;
+let audio = new Audio();
 
-  // Funzione per visualizzare le top tracce dell'artista
-  const displayTopTracks = (tracks) => {
-    const trackList = document.getElementById('trackList');
-    trackList.innerHTML = tracks.data
-      .map(
-        (track, index) => `
-      <li class="d-flex justify-content-between align-items-center mb-2">
-        <span>${index + 1}. ${track.title}</span>
-        <span>${Math.floor(track.duration / 60)}:${track.duration % 60 < 10 ? '0' : ''}${track.duration % 60}</span>
-      </li>
-    `
-      )
-      .join('');
-  };
+// Funzione per formattare i tempi (es. 3:45)
+const formatTime = (seconds) => {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = Math.floor(seconds % 60);
+  return `${minutes}:${remainingSeconds.toString().padStart(2, "0")}`;
+};
 
-  // Funzione per visualizzare gli album dell'artista
-  const displayAlbums = (albums) => {
-    const albumRow = document.getElementById('albumRow');
-    albumRow.innerHTML = albums.data
-      .map(
-        (album) => `
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2">
-        <div class="card h-100 border-0 p-3" style="background-color: #161616;">
-          <img src="${album.cover_medium}" class="card-img-top img-fluid" alt="${album.title}">
-          <div class="card-body d-flex flex-column justify-content-between px-0">
-            <h6 class="card-title"><a class="text-decoration-none text-white" href="album.html?albumId=${album.id}">${album.title}</a></h6>
-            <p class="card-text" style="font-size: 0.7rem; color: #808080;">${album.release_date}</p>
-          </div>
-        </div>
-      </div>
-    `
-      )
-      .join('');
-  };
+// Funzione per gestire la riproduzione/pausa
+const togglePlayPause = () => {
+  if (isPlaying) {
+    audio.pause();
+    playButton.innerHTML = '<i class="bi bi-play-circle-fill"></i>';
+  } else {
+    audio.play();
+    playButton.innerHTML = '<i class="bi bi-pause-circle-fill"></i>';
+  }
+  isPlaying = !isPlaying;
+};
 
-  // Fetch e visualizzazione dei dati
-  const loadArtistData = async () => {
-    const artist = await fetchData(artistUrl);
-    const topTracks = await fetchData(topTracksUrl);
-    const albums = await fetchData(albumsUrl);
+// Funzione per aggiornare la barra di progresso
+const updateProgress = () => {
+  progressBar.value = audio.currentTime;
+  currentTimeElem.textContent = formatTime(audio.currentTime);
+};
 
-    if (artist) displayArtistDetails(artist);
-    if (topTracks) displayTopTracks(topTracks);
-    if (albums) displayAlbums(albums);
-  };
+// Funzione per gestire il cambiamento della posizione nella traccia
+const seekTrack = () => {
+  audio.currentTime = progressBar.value;
+};
 
-  loadArtistData();
+// Funzione per saltare alla traccia precedente
+const skipBack = () => {
+  audio.currentTime = 0;
+  audio.play();
+  playButton.innerHTML = '<i class="bi bi-pause-circle-fill"></i>';
+  isPlaying = true;
+};
+
+// Funzione per saltare alla traccia successiva
+const skipForward = () => {
+  audio.currentTime = 0;
+  audio.play();
+  playButton.innerHTML = '<i class="bi bi-pause-circle-fill"></i>';
+  isPlaying = true;
+};
+
+// Funzione per caricare i dati della traccia
+const loadTrack = (trackId) => {
+  fetch(`${apiUrl}${trackId}`, options)
+    .then((res) => res.json())
+    .then((data) => {
+      // Imposta il titolo della canzone, l'artista e la copertura
+      songTitle.textContent = data.title;
+      songArtist.textContent = data.artist.name;
+      songCover.src = data.album.cover_medium;
+
+      // Imposta l'audio e la durata totale della traccia
+      audio.src = data.preview;  // Usa il link del preview della traccia
+      audio.addEventListener("loadedmetadata", () => {
+        totalTimeElem.textContent = formatTime(audio.duration);
+        progressBar.max = audio.duration;
+      });
+    })
+    .catch((err) => console.error("Errore:", err));
+};
+
+// Gestisci l'evento di riproduzione/pausa
+playButton.addEventListener("click", togglePlayPause);
+
+// Gestisci l'aggiornamento della barra di progresso
+audio.addEventListener("timeupdate", updateProgress);
+
+// Gestisci il cambiamento della posizione nella traccia
+progressBar.addEventListener("input", seekTrack);
+
+// Gestisci il salto alla traccia precedente
+skipBackButton.addEventListener("click", skipBack);
+
+// Gestisci il salto alla traccia successiva
+skipForwardButton.addEventListener("click", skipForward);
+
+// Aggiungi la gestione del volume
+volumeSlider.addEventListener("input", () => {
+  audio.volume = volumeSlider.value / 100;
+});
+
+// Gestisci la fine della traccia (passa alla traccia successiva)
+audio.addEventListener("ended", skipForward);
+
+// Carica la traccia all'avvio del player
+if (trackId) {
+  loadTrack(trackId);
 }
