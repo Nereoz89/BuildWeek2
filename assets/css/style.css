@@ -92,3 +92,7 @@ div > h5 {
     width: 30%;
   }
 }
+
+#albumCard {
+  background-color: #161616;
+}

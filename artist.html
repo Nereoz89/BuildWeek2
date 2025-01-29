@@ -99,58 +99,8 @@
         </div>
 
         <div id="mainDiv" class="col-7" style="background: linear-gradient(to bottom, #252525, #121212); padding: 20px">
-          <!-- Sezione Artista -->
-          <div
-            style="
-              background-image: url('https://images.squarespace-cdn.com/content/v1/633ca5b0779be916e13bb32c/6f14852e-8e26-4da6-a9f7-9d631e5ace4c/Yellowcard-band-concert-events-tickets.jpg');
-              background-size: cover;
-              background-position: center;
-              margin-bottom: 20px;
-              position: relative;
-              height: 375px;
-            "
-          >
-            <!-- Overlay scuro per migliorare la leggibilità del testo -->
-            <div
-              style="
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0.5);
-                border-radius: 10px;
-              "
-            ></div>
-
-            <!-- Contenuto Artista -->
-            <div
-              style="
-                position: relative;
-                z-index: 1;
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: left;
-                height: 100%;
-              "
-            >
-              <!-- Icona di verifica e testo -->
-              <div style="display: flex; align-items: left; margin-bottom: 10px">
-                <small style="color: white; font-size: 12px; margin-right: 5px">Artist Verification</small>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00bfff" viewBox="0 0 16 16">
-                  <path
-                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm3.36 5.28l-4.5 4.5a.75.75 0 0 1-1.06 0l-2-2a.75.75 0 0 1 1.06-1.06l1.47 1.47 3.94-3.94a.75.75 0 0 1 1.06 1.06z"
-                  />
-                </svg>
-              </div>
-              <!-- Nome Artista -->
-              <h1 style="font-size: 100px; margin: 5px 0; color: white">Yellowcard</h1>
-              <!-- Ascoltatori mensili -->
-              <p style="color: #b3b3b3; font-size: 14px">3,433,567 ascoltatori mensili</p>
-            </div>
-          </div>
+          <!-- Sezione dinamicamente popolata -->
+          <div class="container-fluid d-flex flex-column flex-md-row pb-3" id="secondContent"></div>
           <!-- Sezione icone -->
           <div class="d-flex justify-content-start align-items-center ms-3">
             <i class="colorSpotify bi bi-play-circle-fill fs-1 me-4"></i>
@@ -160,78 +110,7 @@
 
           <!-- Sezione Canzoni -->
           <div style="display: flex; justify-content: space-between; margin-top: 20px">
-            <!-- Sezione Sinistra: Lista Canzoni -->
-            <div style="width: 60%">
-              <h3 style="padding: 20px; font-size: 20px; margin-bottom: 10px; color: white">Canzoni Popolari</h3>
-              <ol style="list-style-type: none; padding: 0">
-                <li style="display: flex; align-items: center; padding: 10px 0">
-                  <span style="color: white; width: 5%; text-align: center; font-size: 10px">1</span>
-                  <img
-                    src="assets/imgs/main/image-15.jpg"
-                    alt="Nome Canzone 1"
-                    style="width: 10%; height: auto; margin-right: 10px"
-                  />
-                  <span style="color: white; width: 40%; font-size: 10px">Ocean avenue</span>
-                  <div style="display: flex; justify-content: space-between; width: 45%">
-                    <span style="color: #b3b3b3; font-size: 10px">456,789 ascolti</span>
-                    <span style="color: #b3b3b3; font-size: 10px">3:45</span>
-                  </div>
-                </li>
-                <li style="display: flex; align-items: center; padding: 10px 0">
-                  <span style="color: white; width: 5%; text-align: center; font-size: 10px">2</span>
-                  <img
-                    src="assets/imgs/main/image-15.jpg"
-                    alt="Nome Canzone 2"
-                    style="width: 10%; height: auto; margin-right: 10px"
-                  />
-                  <span style="color: white; width: 40%; font-size: 10px">Only one</span>
-                  <div style="display: flex; justify-content: space-between; width: 45%">
-                    <span style="color: #b3b3b3; font-size: 10px">765,432 ascolti</span>
-                    <span style="color: #b3b3b3; font-size: 10px">4:12</span>
-                  </div>
-                </li>
-                <li style="display: flex; align-items: center; padding: 10px 0">
-                  <span style="color: white; width: 5%; text-align: center; font-size: 10px">3</span>
-                  <img
-                    src="assets/imgs/main/image-15.jpg"
-                    alt="Nome Canzone 3"
-                    style="width: 10%; height: auto; margin-right: 10px"
-                  />
-                  <span style="color: white; width: 40%; font-size: 10px">Breathing</span>
-                  <div style="display: flex; justify-content: space-between; width: 45%">
-                    <span style="color: #b3b3b3; font-size: 10px">654,321 ascolti</span>
-                    <span style="color: #b3b3b3; font-size: 10px">3:30</span>
-                  </div>
-                </li>
-                <li style="display: flex; align-items: center; padding: 10px 0">
-                  <span style="color: white; width: 5%; text-align: center; font-size: 10px">4</span>
-                  <img
-                    src="assets/imgs/main/image-15.jpg"
-                    alt="Nome Canzone 4"
-                    style="width: 10%; height: auto; margin-right: 10px"
-                  />
-                  <span style="color: white; width: 40%; font-size: 10px">Lights and sounds</span>
-                  <div style="display: flex; justify-content: space-between; width: 45%">
-                    <span style="color: #b3b3b3; font-size: 10px">543,210 ascolti</span>
-                    <span style="color: #b3b3b3; font-size: 10px">3:55</span>
-                  </div>
-                </li>
-                <li style="display: flex; align-items: center; padding: 10px 0">
-                  <span style="color: white; width: 5%; text-align: center; font-size: 10px">5</span>
-                  <img
-                    src="assets/imgs/main/image-15.jpg"
-                    alt="Nome Canzone 5"
-                    style="width: 10%; height: auto; margin-right: 10px"
-                  />
-                  <span style="color: white; width: 40%; font-size: 10px">Way away</span>
-                  <div style="display: flex; justify-content: space-between; width: 45%">
-                    <span style="color: #b3b3b3; font-size: 10px">432,109 ascolti</span>
-                    <span style="color: #b3b3b3; font-size: 10px">4:00</span>
-                  </div>
-                </li>
-              </ol>
-              <p style="color: #b3b3b3; cursor: pointer; margin-top: 10px">Visualizza altro</p>
-            </div>
+            <div class="row mt-4 align-items-center" id="albumContent"></div>
 
             <!-- Sezione Destra: Brani che ti piacciono -->
             <div style="width: 35%; padding: 20px; border-radius: 10px">
