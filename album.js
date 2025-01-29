@@ -44,7 +44,7 @@ const generateTracks = (tracks) => {
     const content = document.createElement("div");
     content.classList.add("d-flex", "align-items-center");
     content.innerHTML = `
-      <div class="col col-md-8 d-flex justify-content-between ms-5 me-5">
+      <div class="col col-md-8 d-flex justify-content-between ms-4 me-4">
          <div>
            <h6 class="mb-0">${el.title}</h6>
            <p class='text-secondary mt-1' style="font-size: 0.8em;">${el.artist.name}</p>
@@ -54,7 +54,10 @@ const generateTracks = (tracks) => {
              style="font-size: 1.5em"
              class="bi bi-three-dots-vertical d-md-none"
            ></i>
-           <p class="mb-0 d-none d-md-block" style="font-size: 0.8em;">${el.rank.toLocaleString("it-IT", options)}</p>
+           <p class="mb-0 d-none d-md-block me-3" style="font-size: 0.8em;">${el.rank.toLocaleString(
+             "it-IT",
+             options
+           )}</p>
          </div>
         </div>
          <div class="col d-flex justify-content-end d-none d-md-flex">
@@ -68,24 +71,17 @@ const generateTracks = (tracks) => {
 //  ALBUM DETAILS
 const generateDetails = (details) => {
   secondRow.innerHTML = `
-    <div class="d-flex justify-content-center mt-4">
-      <img src="${details.cover_big}" crossorigin="anonymous" alt="img" width="70%" id="myImg"/>
-    </div>
-    <div class="d-flex flex-column justify-content-end">
-      <h1 class="mt-4 fs-md-4">${details.title}</h1>
-      <div class="d-flex align-items-center">
-        <img
-          src="${details.artist.picture_big}"
-          width="10%"
-          class="rounded-5 me-2"
-          alt="img"
-        
-        <p class="ms-2 mb-0 d-flex align-items-center">${details.artist.name}</p>
-        <p class="ms-2 mb-0 d-flex align-items-center">${details.tracks.data.length} brani</p>
-        <p class="ms-2 mb-0 d-flex align-items-center">${Math.floor(details.duration / 60)}:${
-    details.duration % 60
-  } </p>
+  <div class="d-flex justify-content-between align-items-center mt-4">
+    <img src="${details.cover_big}" crossorigin="anonymous" alt="img" width="30%" class="shadow-lg" id="myImg"/>
+    <div class="d-flex flex-column ms-4">
+      <h1 class="mt-5" style="font-size: 3.5rem; font-weight: bold;">${details.title}</h1>
+ <div class="d-flex align-items-center">
+        <img src="${details.artist.picture_big}" width="5%" class="rounded-5 me-2" alt="img"/>
+        <p class="ms-2 mb-0">${details.artist.name}</p>
+        <p class="ms-2 mb-0">${details.tracks.data.length} brani</p>
+        <p class="ms-2 mb-0">${Math.floor(details.duration / 60)}:${details.duration % 60}</p>
       </div>
     </div>
-    `;
+  </div>
+`;
 };

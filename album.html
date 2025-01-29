@@ -11,6 +11,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      ;
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body class="text-white">
@@ -107,7 +115,6 @@
               <li class="mt-1 mb-1"><a href=""></a>𝙼𝚢 𝚆𝚘𝚛𝚕𝚍 ♡︎☁︎</li>
               <li class="mt-1 mb-1"><a href=""></a>Hi world ツ</li>
               <li class="mt-1 mb-1"><a href=""></a>★𝓓𝓪𝓻𝓴𝓢𝓽𝓪𝓻™★</li>
-              <li class="mt-1 mb-1"><a href=""></a>🆆🆁🅸🆃🅴 🅼🅴 🆂🅾🅼🅴🆃🅷🅸🅽🅶</li>
               <li class="mt-1 mb-1">
                 <a href=""></a>Let's fine something better to do 'cause i'm mentally exausted 🌍
               </li>
@@ -128,7 +135,6 @@
               <li class="mt-1 mb-1"><a href=""></a>𝙼𝚢 𝚆𝚘𝚛𝚕𝚍 ♡︎☁︎</li>
               <li class="mt-1 mb-1"><a href=""></a>Hi world ツ</li>
               <li class="mt-1 mb-1"><a href=""></a>★𝓓𝓪𝓻𝓴𝓢𝓽𝓪𝓻™★</li>
-              <li class="mt-1 mb-1"><a href=""></a>🆆🆁🅸🆃🅴 🅼🅴 🆂🅾🅼🅴🆃🅷🅸🅽🅶</li>
               <li class="mt-1 mb-1">
                 <a href=""></a>Let's fine something better to do 'cause i'm mentally exausted 🌍
               </li>
@@ -136,24 +142,20 @@
             </ul>
           </div>
         </div>
-        <div
-          id="mainDiv"
-          class="col-12 col-md-7 p-sm-4 p-md-0"
-          style="background: linear-gradient(to bottom, #d3b74b, #000000)"
-        >
+        <div id="mainDiv" class="col-12 col-md-7" style="background: linear-gradient(to bottom, #d3b74b, #000000)">
           <div>
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center ms-4">
               <div class="col-3 pt-3">
-                <i class="fas fa-chevron-circle-left fs-3 me-3" style="color: #000000"></i>
-                <i class="fas fa-chevron-circle-right fs-3 me-3" style="color: #000000"> </i>
+                <i class="fas fa-chevron-circle-left fs-3 me-3 text-dark"></i>
+                <i class="fas fa-chevron-circle-right fs-3 me-3" style="color: rgba(0, 0, 0, 0.377)"> </i>
               </div>
               <div class="dropdown pt-3">
                 <button
-                  class="btn btn-secondary dropdown-toggle"
+                  class="btn btn-sm btn-secondary dropdown-toggle d-flex align-items-center rounded-pill bg-dark me-4"
                   type="button"
+                  id="dropdownMenuButton"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  style="background-color: black; border: none"
                 >
                   <img
                     src="https://plus.unsplash.com/premium_photo-1737659254856-bb79e14b3ea5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
@@ -164,7 +166,7 @@
                   />
                   <span>Lidia Nautilus</span>
                 </button>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <li><a class="dropdown-item" href="#">Action</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -176,9 +178,9 @@
             <div class="row">
               <div style="background: linear-gradient(to top, black, #000000a1, #362f148e)">
                 <div class="d-flex align-items-center">
-                  <i id="play" class="bi bi-play-circle-fill fs-1 ms-5 me-3 mt-3"></i>
-                  <i class="bi bi-heart fs-3 me-3 mt-3"></i>
-                  <i class="bi bi-arrow-down-circle fs-3 me-3 mt-3"></i>
+                  <i id="play" class="bi bi-play-circle-fill fs-1 ms-4 me-4 mt-3"></i>
+                  <i class="bi bi-heart fs-3 me-4 mt-3"></i>
+                  <i class="bi bi-arrow-down-circle fs-3 me-4 mt-3"></i>
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -197,14 +199,16 @@
 
                 <div class="row justify-content-between align-items-center">
                   <div class="col-6 mt-5 d-flex justify-content-start">
-                    <p class="mx-5">#</p>
-                    <p>Titolo</p>
+                    <p class="mx-4 mb-0">#</p>
+                    <p class="mb-0">Titolo</p>
                   </div>
                   <div class="col-6 mt-5 d-flex justify-content-between">
-                    <p>Riproduzione</p>
-                    <i class="bi bi-clock me-5"></i>
+                    <p class="ms-5 mb-0">Riproduzione</p>
+                    <i class="bi bi-clock me-4"></i>
                   </div>
-                  <hr class="w-75 mx-auto my-1" />
+                  <div class="w-85">
+                    <hr class="mt-2 mb-2" />
+                  </div>
                   <!-- contenuto album -->
                   <div class="row mt-4 align-items-center" id="albumContent"></div>
                 </div>
@@ -216,10 +220,10 @@
         <div class="d-none d-md-block col-md-2" style="background-color: #000000">
           <div class="mt-4">
             <div class="d-flex justify-content-between align-items-center">
-              <h4 class="text-white" style="font-size: 20px">Attività amici</h4>
-              <div>
-                <i class="bi bi-person-plus text-white me-3 fs-4" style="cursor: pointer"></i>
-                <i class="bi bi-x-circle text-white fs-4" style="cursor: pointer"></i>
+              <h4 class="text-white" style="font-size: 15px; margin-bottom: 0">Attività amici</h4>
+              <div class="d-flex align-items-center">
+                <i class="bi bi-person-plus text-white me-3 fs-5" style="cursor: pointer"></i>
+                <i class="bi bi-x text-white fs-5" style="cursor: pointer"></i>
               </div>
             </div>
 
@@ -228,8 +232,8 @@
                 <img
                   src="https://randomuser.me/api/portraits/men/1.jpg"
                   alt="Amico 1"
-                  width="40"
-                  height="40"
+                  width="20"
+                  height="20"
                   class="rounded-circle"
                 />
                 <div class="ms-2">
@@ -245,8 +249,8 @@
                 <img
                   src="https://randomuser.me/api/portraits/women/2.jpg"
                   alt="Amico 2"
-                  width="40"
-                  height="40"
+                  width="20"
+                  height="20"
                   class="rounded-circle"
                 />
                 <div class="ms-2">
@@ -262,8 +266,8 @@
                 <img
                   src="https://randomuser.me/api/portraits/men/3.jpg"
                   alt="Amico 3"
-                  width="40"
-                  height="40"
+                  width="20"
+                  height="20"
                   class="rounded-circle"
                 />
                 <div class="ms-2">
