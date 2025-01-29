@@ -44,21 +44,24 @@ const generateTracks = (tracks) => {
     const content = document.createElement("div");
     content.classList.add("d-flex", "align-items-center");
     content.innerHTML = `
-      <div class="col col-md-8 d-flex justify-content-between">
+      <div class="col col-md-8 d-flex justify-content-between ms-4 me-4">
          <div>
            <h6 class="mb-0">${el.title}</h6>
-           <p class='text-secondary'>${el.artist.name}</p>
+           <p class='text-secondary mt-1' style="font-size: 0.8em;">${el.artist.name}</p>
          </div>
          <div class="d-flex align-items-center">
            <i
              style="font-size: 1.5em"
              class="bi bi-three-dots-vertical d-md-none"
            ></i>
-           <p class="mb-0 d-none d-md-block">${el.rank.toLocaleString("it-IT", options)}</p>
+           <p class="mb-0 d-none d-md-block me-3" style="font-size: 0.8em;">${el.rank.toLocaleString(
+             "it-IT",
+             options
+           )}</p>
          </div>
         </div>
          <div class="col d-flex justify-content-end d-none d-md-flex">
-            <p class="mb-0 d-none d-md-block">${Math.floor(el.duration / 60)}:${seconds}</p>
+            <p class="mb-0 d-none d-md-block " style="font-size: 0.8em;">${Math.floor(el.duration / 60)}:${seconds}</p>
           </div>
       `;
     mainRow.appendChild(content);
@@ -68,24 +71,19 @@ const generateTracks = (tracks) => {
 //  ALBUM DETAILS
 const generateDetails = (details) => {
   secondRow.innerHTML = `
-    <div class="d-flex justify-content-center mt-4">
-      <img src="${details.cover_big}" crossorigin="anonymous" alt="img" width="70%" id="myImg"/>
-    </div>
-    <div class="d-flex flex-column justify-content-end">
-      <h1 class="mt-4 fs-md-4">${details.title}</h1>
+  <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
+    <!-- Immagine più piccola su dispositivi più grandi -->
+    <img src="${details.cover_big}" crossorigin="anonymous" alt="img" 
+     class="shadow-lg mb-3 mb-md-0 img-responsive" />
+    <div class="d-flex flex-column ms-md-4">
+      <h1 class="mt-5 " style="font-size: 3rem; font-weight: bold;">${details.title}</h1>
       <div class="d-flex align-items-center">
-        <img
-          src="${details.artist.picture_big}"
-          width="10%"
-          class="rounded-5 me-2"
-          alt="img"
-        
-        <p class="ms-2 mb-0 d-flex align-items-center">${details.artist.name}</p>
-        <p class="ms-2 mb-0 d-flex align-items-center">${details.tracks.data.length} brani</p>
-        <p class="ms-2 mb-0 d-flex align-items-center">${Math.floor(details.duration / 60)}:${
-    details.duration % 60
-  } </p>
+        <img src="${details.artist.picture_big}" width="5%" class="rounded-5 me-2" alt="img"/>
+        <p class="ms-2 mb-0">${details.artist.name}</p>
+        <p class="ms-2 mb-0 d-block d-md-inline">${details.tracks.data.length} brani</p>
+        <p class="ms-2 mb-0">${Math.floor(details.duration / 60)}:${details.duration % 60}</p>
       </div>
     </div>
-    `;
+  </div>
+`;
 };

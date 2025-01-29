@@ -32,19 +32,19 @@
           <ul class="nav justify-content-around">
             <li class="nav-item text-center">
               <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
-                <i class="bi bi-house-door-fill me-2"></i>
+                <i class="bi bi-house-door-fill me-2 fs-3"></i>
                 <span>Home</span>
               </a>
             </li>
             <li class="nav-item text-center">
               <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
-                <i class="bi bi-search me-2"></i>
+                <i class="bi bi-search me-2 fs-3"></i>
                 <span>Cerca</span>
               </a>
             </li>
             <li class="nav-item text-center">
               <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
-                <i class="bi bi-collection-fill me-2"></i>
+                <i class="bi bi-collection-fill me-2 fs-3"></i>
                 <span>La tua libreria</span>
               </a>
             </li>
@@ -73,7 +73,7 @@
                 ><a class="nav-link active text-white fw-bold" aria-current="page" href="#"> Home</a>
               </li>
               <li class="nav-item d-flex align-items-center">
-                <span><i class="bi bi-search"></i></span><a class="nav-link text-white" href="#"> Crea</a>
+                <span><i class="bi bi-search"></i></span><a class="nav-link text-white" href="#"> Cerca</a>
               </li>
               <li class="nav-item d-flex align-items-center">
                 <span><i class="bi bi-collection-fill"></i></span
@@ -116,7 +116,6 @@
               <li class="mt-1 mb-1"><a href=""></a>𝙼𝚢 𝚆𝚘𝚛𝚕𝚍 ♡︎☁︎</li>
               <li class="mt-1 mb-1"><a href=""></a>Hi world ツ</li>
               <li class="mt-1 mb-1"><a href=""></a>★𝓓𝓪𝓻𝓴𝓢𝓽𝓪𝓻™★</li>
-              <li class="mt-1 mb-1"><a href=""></a>🆆🆁🅸🆃🅴 🅼🅴 🆂🅾🅼🅴🆃🅷🅸🅽🅶</li>
               <li class="mt-1 mb-1">
                 <a href=""></a>Let's fine something better to do 'cause i'm mentally exausted 🌍
               </li>
@@ -137,7 +136,6 @@
               <li class="mt-1 mb-1"><a href=""></a>𝙼𝚢 𝚆𝚘𝚛𝚕𝚍 ♡︎☁︎</li>
               <li class="mt-1 mb-1"><a href=""></a>Hi world ツ</li>
               <li class="mt-1 mb-1"><a href=""></a>★𝓓𝓪𝓻𝓴𝓢𝓽𝓪𝓻™★</li>
-              <li class="mt-1 mb-1"><a href=""></a>🆆🆁🅸🆃🅴 🅼🅴 🆂🅾🅼🅴🆃🅷🅸🅽🅶</li>
               <li class="mt-1 mb-1">
                 <a href=""></a>Let's fine something better to do 'cause i'm mentally exausted 🌍
               </li>
@@ -146,11 +144,7 @@
           </div>
         </div>
 
-        <div
-          id="mainDiv"
-          class="col-12 col-md-7 p-sm-4 p-md-0"
-          style="background: linear-gradient(to bottom, #252525, #121212)"
-        >
+        <div id="mainDiv" class="col-12 col-md-7" style="background: linear-gradient(to bottom, #252525, #121212)">
           <div class="d-none d-md-flex justify-content-between align-items-center">
             <div class="col-3 pt-3 align-items-center">
               <i class="fas fa-chevron-circle-left fs-3 me-3" style="color: #000000"></i>
@@ -159,7 +153,7 @@
 
             <div class="dropdown pt-3">
               <button
-                class="btn btn-secondary dropdown-toggle d-flex align-items-center rounded-pill"
+                class="btn btn-sm btn-secondary dropdown-toggle d-flex align-items-center rounded-pill"
                 type="button"
                 id="dropdownMenuButton"
                 data-bs-toggle="dropdown"
@@ -230,16 +224,22 @@
               </div>
             </div>
           </div>
-          <h3 class="pt-3 p-md-0 d-flex justify-content-between align-items-center fs-1 d-block d-md-none">
-            <span>Buonasera</span>
-            <div>
-              <i class="bi bi-bell ms-3 fs-4"></i>
-              <i class="bi bi-clock-history ms-3 fs-4"></i>
-              <i class="bi bi-gear ms-3 fs-4"></i>
+          <!-- h3 mobile-->
+          <h3 class="pt-4 p-md-0 d-flex justify-content-between align-items-center fs-1 d-block d-md-none">
+            <span class="mb-4">Buonasera</span>
+            <div class="mb-4">
+              <i class="bi bi-bell ms-3 fs-2"></i>
+              <i class="bi bi-clock-history ms-3 fs-2"></i>
+              <i class="bi bi-gear ms-3 fs-2"></i>
             </div>
           </h3>
-
+          <!-- h3 per gli altri dispositivi-->
           <h3 class="pt-3 p-md-0 d-none d-md-flex fs-4">Buonasera</h3>
+          <!-- Scitte visibili solo per mobile-->
+          <div class="text-start d-block d-md-none mb-4">
+            <h4 class="d-inline-block fs-6 bg-dark p-2 rounded-pill">Musica</h4>
+            <h4 class="d-inline-block fs-6 bg-dark p-2 ms-4 rounded-pill">Podcast e Show</h4>
+          </div>
 
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-3">
             <div class="col pt-0 ps-2">
@@ -316,10 +316,10 @@
         <div class="d-none d-md-block col-md-2" style="background-color: black">
           <div class="mt-4">
             <div class="d-flex justify-content-between align-items-center">
-              <h4 class="text-white" style="font-size: 20px">Attività amici</h4>
-              <div>
-                <i class="bi bi-person-plus text-white me-3 fs-4" style="cursor: pointer"></i>
-                <i class="bi bi-x-circle text-white fs-4" style="cursor: pointer"></i>
+              <h4 class="text-white" style="font-size: 15px; margin-bottom: 0">Attività amici</h4>
+              <div class="d-flex align-items-center">
+                <i class="bi bi-person-plus text-white me-3 fs-5" style="cursor: pointer"></i>
+                <i class="bi bi-x text-white fs-5" style="cursor: pointer"></i>
               </div>
             </div>
 
@@ -328,8 +328,8 @@
                 <img
                   src="https://randomuser.me/api/portraits/men/1.jpg"
                   alt="Amico 1"
-                  width="40"
-                  height="40"
+                  width="20"
+                  height="20"
                   class="rounded-circle"
                 />
                 <div class="ms-2">
@@ -345,8 +345,8 @@
                 <img
                   src="https://randomuser.me/api/portraits/women/2.jpg"
                   alt="Amico 2"
-                  width="40"
-                  height="40"
+                  width="20"
+                  height="20"
                   class="rounded-circle"
                 />
                 <div class="ms-2">
@@ -362,8 +362,8 @@
                 <img
                   src="https://randomuser.me/api/portraits/men/3.jpg"
                   alt="Amico 3"
-                  width="40"
-                  height="40"
+                  width="20"
+                  height="20"
                   class="rounded-circle"
                 />
                 <div class="ms-2">

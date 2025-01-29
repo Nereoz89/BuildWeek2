@@ -70,12 +70,6 @@ div > h5 {
   border-radius: 50%;
 }
 
-#spazio {
-  width: 80%;
-  margin: 20px auto;
-  border: 1px solid white;
-}
-
 #play {
   font-size: 3rem;
   color: #1fb74f;
@@ -89,6 +83,20 @@ div > h5 {
 
 .me-3 {
   margin-right: 1rem;
+}
+
+/* Pagina album  */
+@media (max-width: 767px) {
+  .img-responsive {
+    width: 70%;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .img-responsive {
+    width: 30%;
+  }
 }
 
 #albumCard {
