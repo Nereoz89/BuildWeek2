@@ -70,12 +70,6 @@ div > h5 {
   border-radius: 50%;
 }
 
-#spazio {
-  width: 80%;
-  margin: 20px auto;
-  border: 1px solid white;
-}
-
 #play {
   font-size: 3rem;
   color: #1fb74f;

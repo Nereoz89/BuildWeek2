@@ -44,21 +44,21 @@ const generateTracks = (tracks) => {
     const content = document.createElement("div");
     content.classList.add("d-flex", "align-items-center");
     content.innerHTML = `
-      <div class="col col-md-8 d-flex justify-content-between">
+      <div class="col col-md-8 d-flex justify-content-between ms-5 me-5">
          <div>
            <h6 class="mb-0">${el.title}</h6>
-           <p class='text-secondary'>${el.artist.name}</p>
+           <p class='text-secondary mt-1' style="font-size: 0.8em;">${el.artist.name}</p>
          </div>
          <div class="d-flex align-items-center">
            <i
              style="font-size: 1.5em"
              class="bi bi-three-dots-vertical d-md-none"
            ></i>
-           <p class="mb-0 d-none d-md-block">${el.rank.toLocaleString("it-IT", options)}</p>
+           <p class="mb-0 d-none d-md-block" style="font-size: 0.8em;">${el.rank.toLocaleString("it-IT", options)}</p>
          </div>
         </div>
          <div class="col d-flex justify-content-end d-none d-md-flex">
-            <p class="mb-0 d-none d-md-block">${Math.floor(el.duration / 60)}:${seconds}</p>
+            <p class="mb-0 d-none d-md-block " style="font-size: 0.8em;">${Math.floor(el.duration / 60)}:${seconds}</p>
           </div>
       `;
     mainRow.appendChild(content);

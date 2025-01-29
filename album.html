@@ -16,7 +16,33 @@
   <body class="text-white">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-3" style="background-color: rgb(0, 0, 0)">
+        <!-- Navbar su dispositivi mobile -->
+        <div
+          class="d-block d-md-none position-fixed bottom-0 w-100"
+          style="z-index: 9999; background-color: rgba(0, 0, 0, 0.205); box-shadow: 0 4px 6px rgb(0, 0, 0)"
+        >
+          <ul class="nav justify-content-around">
+            <li class="nav-item text-center">
+              <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
+                <i class="bi bi-house-door-fill me-2"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="nav-item text-center">
+              <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
+                <i class="bi bi-search me-2"></i>
+                <span>Cerca</span>
+              </a>
+            </li>
+            <li class="nav-item text-center">
+              <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
+                <i class="bi bi-collection-fill me-2"></i>
+                <span>La tua libreria</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-none d-md-block col-md-3 pt-3 ps-4 p-4" style="background-color: rgb(0, 0, 0)">
           <div>
             <ul class="nav flex-column">
               <li>
@@ -38,7 +64,7 @@
                 ><a class="nav-link active text-white fw-bold" aria-current="page" href="index.html"> Home</a>
               </li>
               <li class="nav-item d-flex align-items-center">
-                <span><i class="bi bi-search"></i></span><a class="nav-link text-white" href="#"> Crea</a>
+                <span><i class="bi bi-search"></i></span><a class="nav-link text-white" href="#"> Cerca</a>
               </li>
               <li class="nav-item d-flex align-items-center">
                 <span><i class="bi bi-collection-fill"></i></span
@@ -110,79 +136,84 @@
             </ul>
           </div>
         </div>
-
-        <div class="col-7" style="background: linear-gradient(to bottom, #d7ba4c, #857430)">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="col-3 pt-3">
-              <i class="fas fa-chevron-circle-left fs-3 me-3" style="color: #000000"></i>
-              <i class="fas fa-chevron-circle-right fs-3 me-3" style="color: #000000"> </i>
-            </div>
-            <div class="dropdown pt-3">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                style="background-color: black; border: none"
-              >
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1737659254856-bb79e14b3ea5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
-                  alt="Lidia"
-                  width="25"
-                  height="25"
-                  class="rounded-circle me-2"
-                />
-                <span>Lidia Nautilus</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="container-fluid d-flex flex-column flex-md-row pb-3" id="secondContent"></div>
-
-          <div class="row">
-            <div style="background: #463e1c">
-              <div>
-                <i id="play" class="bi bi-play-circle-fill w-100 fs-1 ms-5 me-3"></i>
-
-                <i class="bi bi-heart me-3"></i>
-                <i class="bi bi-arrow-down-square me-3"></i>
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
+        <div
+          id="mainDiv"
+          class="col-12 col-md-7 p-sm-4 p-md-0"
+          style="background: linear-gradient(to bottom, #d3b74b, #000000)"
+        >
+          <div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="col-3 pt-3">
+                <i class="fas fa-chevron-circle-left fs-3 me-3" style="color: #000000"></i>
+                <i class="fas fa-chevron-circle-right fs-3 me-3" style="color: #000000"> </i>
+              </div>
+              <div class="dropdown pt-3">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="background-color: black; border: none"
+                >
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1737659254856-bb79e14b3ea5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
+                    alt="Lidia"
                     width="25"
                     height="25"
-                    fill="currentColor"
-                    class="bi bi-three-dots text-white"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-                    />
-                  </svg>
-                </span>
+                    class="rounded-circle me-2"
+                  />
+                  <span>Lidia Nautilus</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
               </div>
-              <div class="row justify-content-between align-items-center" style="background: #463e1c">
-                <div class="col-6 mt-5 d-flex justify-content-start">
-                  <p class="mx-5">#</p>
-                  <p>Titolo</p>
+            </div>
+            <div class="container-fluid d-flex flex-column flex-md-row pb-3" id="secondContent"></div>
+
+            <div class="row">
+              <div style="background: linear-gradient(to top, black, #000000a1, #362f148e)">
+                <div class="d-flex align-items-center">
+                  <i id="play" class="bi bi-play-circle-fill fs-1 ms-5 me-3 mt-3"></i>
+                  <i class="bi bi-heart fs-3 me-3 mt-3"></i>
+                  <i class="bi bi-arrow-down-circle fs-3 me-3 mt-3"></i>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="currentColor"
+                      class="bi bi-three-dots text-white mt-3"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                      />
+                    </svg>
+                  </span>
                 </div>
-                <div class="col-6 mt-5 d-flex justify-content-between">
-                  <p>Riproduzione</p>
-                  <i class="bi bi-clock me-5"></i>
+
+                <div class="row justify-content-between align-items-center">
+                  <div class="col-6 mt-5 d-flex justify-content-start">
+                    <p class="mx-5">#</p>
+                    <p>Titolo</p>
+                  </div>
+                  <div class="col-6 mt-5 d-flex justify-content-between">
+                    <p>Riproduzione</p>
+                    <i class="bi bi-clock me-5"></i>
+                  </div>
+                  <hr class="w-75 mx-auto my-1" />
+                  <!-- contenuto album -->
+                  <div class="row mt-4 align-items-center" id="albumContent"></div>
                 </div>
-                <hr id="spazio" />
-                <!-- contenuto album -->
-                <div class="row mt-4 align-items-center" id="albumContent"></div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-2" style="background-color: #000000">
+        <div class="d-none d-md-block col-md-2" style="background-color: #000000">
           <div class="mt-4">
             <div class="d-flex justify-content-between align-items-center">
               <h4 class="text-white" style="font-size: 20px">Attività amici</h4>
