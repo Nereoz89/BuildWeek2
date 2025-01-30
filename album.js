@@ -54,14 +54,16 @@ const generateTracks = (tracks) => {
              style="font-size: 1.5em"
              class="bi bi-three-dots-vertical d-md-none"
            ></i>
-           <p class="mb-0 d-none d-md-block me-3" style="font-size: 0.8em;">${el.rank.toLocaleString(
+           <p class="mb-0 d-none d-md-block me-3 text-secondary" style="font-size: 0.8em;">${el.rank.toLocaleString(
              "it-IT",
              options
            )}</p>
          </div>
         </div>
          <div class="col d-flex justify-content-end d-none d-md-flex">
-            <p class="mb-0 d-none d-md-block " style="font-size: 0.8em;">${Math.floor(el.duration / 60)}:${seconds}</p>
+            <p class="mb-0 d-none d-md-block text-secondary " style="font-size: 0.8em;">${Math.floor(
+              el.duration / 60
+            )}:${seconds}</p>
           </div>
       `;
     mainRow.appendChild(content);
