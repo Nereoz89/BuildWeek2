@@ -144,43 +144,144 @@
         </div>
 
         <div id="mainDiv" class="col-12 col-md-7" style="background: linear-gradient(to bottom, #252525, #121212)">
+          <!--           <div class="d-flex justify-content-between align-items-center ms-3">
+            <div class="col-3 pt-3">
+    
+              <div class="pt-3 d-none d-md-flex align-items-center ms-0">
+                <i
+                  class="fas fa-chevron-left p-3 rounded-circle me-2"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    background-color: #131313a6;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                ></i>
+                <i
+                  class="fas fa-chevron-right text-white p-3 rounded-circle ms-2"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    background-color: #131313a6;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                ></i>
+              </div>
+
+              <div class="d-md-none">
+                <i class="bi bi-arrow-left fs-3 me-3 text-white"></i>
+              </div>
+            </div>
+            <div class="dropdown pt-3">
+              <button
+                class="btn btn-sm btn-secondary dropdown-toggle d-flex align-items-center rounded-pill bg-dark me-4 d-none d-md-block"
+                type="button"
+                id="dropdownMenuButton"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1737659254856-bb79e14b3ea5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
+                  alt="Lidia"
+                  width="25"
+                  height="25"
+                  class="rounded-circle me-2"
+                />
+                <span>Lidia Nautilus</span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </div> -->
           <!-- Sezione dinamicamente popolata -->
           <div class="container-fluid d-flex flex-column flex-md-row pb-3" id="secondContent"></div>
           <!-- Sezione icone -->
-          <div class="d-flex justify-content-start align-items-center ms-3">
-            <i class="colorSpotify bi bi-play-circle-fill fs-1 me-4"></i>
-            <div
-              class="border me-4"
-              style="
-                font-size: 0.7rem;
-                font-weight: bold;
-                padding-top: 0.3rem;
-                padding-bottom: 0.3rem;
-                padding-left: 1rem;
-                padding-right: 1rem;
-              "
-            >
-              FOLLOWING
+          <div class="d-flex align-items-center justify-content-between ms-3">
+            <div class="d-inline-flex align-items-center">
+              <i class="colorSpotify bi bi-play-circle-fill fs-1 me-4 d-none d-md-block"></i>
+              <div
+                class="border me-4"
+                style="
+                  font-size: 0.7rem;
+                  font-weight: bold;
+                  padding-top: 0.3rem;
+                  padding-bottom: 0.2rem;
+                  padding-left: 1rem;
+                  padding-right: 1rem;
+                "
+              >
+                FOLLOWING
+              </div>
+              <i class="bi bi-three-dots"></i>
             </div>
 
-            <i class="bi bi-three-dots"></i>
+            <div class="d-flex justify-content-end align-items-center d-md-none">
+              <i class="bi bi-shuffle fs-3 ms-3 colorSpotify"></i>
+              <i class="colorSpotify bi bi-play-circle-fill fs-1 ms-3 me-4"></i>
+            </div>
           </div>
-          <div class="d-flex justify-content-between mt-3">
-            <div class="left-text ms-4 fs-5 fw-bold">Popolari</div>
-            <div class="right-text me-5 fs-5 fw-bold">Brani che ti piacciono</div>
+          <!-- Visibile solo su mobile -->
+          <div class="d-flex justify-content-between mt-3 d-md-none">
+            <!--     <div class="right-text fs-4 fw-bold d-none d-md-block">Brani che ti piacciono</div> -->
+            <div class="d-flex align-items-center mt-2 mb-5 ms-3" style="position: relative">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/633ca5b0779be916e13bb32c/7bab7381-7f42-4658-b2cd-ef554e163217/Yellowcard-band-social-sharing-image.jpg"
+                alt="Canzone"
+                class="rounded-circle me-2"
+                style="max-width: 15%; height: auto"
+              />
+              <i
+                class="bi bi-heart-fill"
+                style="position: absolute; bottom: -10px; left: 20px; font-size: 1rem; color: #1ed760"
+              ></i>
+              <div style="font-size: 0.75rem">
+                <p class="m-0 text-white">Brani che ti piacciono</p>
+                <small class="text-secondary">8 Brani di Yellowcard</small>
+              </div>
+            </div>
+            <!-- Immagine desktop -->
+            <div class="d-flex align-items-center mt-2 mb-5 ms-3" style="position: relative">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/633ca5b0779be916e13bb32c/7bab7381-7f42-4658-b2cd-ef554e163217/Yellowcard-band-social-sharing-image.jpg"
+                alt="Canzone"
+                class="rounded-circle me-2"
+                style="max-width: 5%; height: auto"
+              />
+              <i
+                class="bi bi-heart-fill"
+                style="position: absolute; bottom: -10px; left: 20px; font-size: 1rem; color: #1ed760"
+              ></i>
+              <div style="font-size: 0.75rem">
+                <p class="m-0 text-white">Brani che ti piacciono</p>
+                <small class="text-secondary">8 Brani di Yellowcard</small>
+              </div>
+            </div>
           </div>
 
           <!-- Sezione Canzoni -->
-          <div style="display: flex; justify-content: space-between">
-            <div class="row col-8 mt-4 align-items-center" id="albumContent"></div>
+          <div class="left-text d-flex justify-content-between align-items-center mt-3 ms-4 fs-4 fw-bold">
+            <p class="m-0">Popolari</p>
+            <p class="m-0 d-none d-md-block">Brani che ti piacciono</p>
+          </div>
+
+          <div style="display: flex; justify-content: space-between" class="flex-column flex-md-row">
+            <div class="row col-12 col-md-8 mt-4 align-items-center" id="albumContent"></div>
 
             <!-- Sezione Destra: Brani che ti piacciono -->
-            <div class="col-4 rounded mt-4 ps-4">
-              <div class="d-flex align-items-center mb-3 ms-5" style="position: relative">
+            <div class="col-12 col-md-4 rounded mt-4 ps-4">
+              <!--  <div class="right-text fs-4 fw-bold d-none d-md-block">Brani che ti piacciono</div> -->
+              <div class="d-flex align-items-center mb-3 d-none d-md-block" style="position: relative">
                 <img
                   src="https://images.squarespace-cdn.com/content/v1/633ca5b0779be916e13bb32c/7bab7381-7f42-4658-b2cd-ef554e163217/Yellowcard-band-social-sharing-image.jpg"
                   alt="Canzone"
-                  class="rounded-circle me-2 ms-2"
+                  class="rounded-circle me-2"
                   style="max-width: 20%; height: auto"
                 />
                 <i
