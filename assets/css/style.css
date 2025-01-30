@@ -79,6 +79,198 @@ div > h5 {
   margin-right: 1rem;
 }
 
+
+
+
+
+
+/* Stile per il player musicale fisso in basso */
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Assicurati che sia a sinistra */
+  width: 100%;
+  background-color: #181818;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 10; /* Garantire che il player sia sopra gli altri contenuti */
+}
+
+/* Contenitore per allineare gli elementi orizzontalmente */
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Controlli centrati del player */
+.center-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 auto;
+  max-width: 600px; /* Puoi regolare questo valore per cambiarne la larghezza */
+}
+
+/* Contenitore dei controlli del player */
+.player-controls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Controlli del player (bottoni) */
+.player-controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Stile per ogni bottone */
+.player-controls .btn {
+  color: white;
+  font-size: 20px;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+  background-color: transparent;
+  border: none;
+}
+
+/* Modifica colore delle icone */
+.player-controls .btn i {
+  color: inherit; /* Eredita il colore del bottone */
+}
+
+/* Colore verde per hover e focus delle icone */
+.player-controls .btn:hover i,
+.player-controls .btn:focus i {
+  color: #1DB954; /* Verde Spotify */
+}
+
+/* Contenitore della barra di progresso */
+.progress-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Stile per il testo della barra di progresso */
+.progress-container span {
+  font-size: 14px;
+  color: #b3b3b3;
+  margin: 0 12px;
+}
+
+/* Barra di progresso */
+.progress-bar {
+  flex-grow: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: #535353;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* Thumb della barra di progresso */
+.progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Controlli a destra (volume e altre icone) */
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px; /* Ridotto lo spazio tra le icone */
+}
+
+/* Stile per i bottoni a destra */
+.right-controls .btn {
+  color: white;
+  font-size: 14px; /* Piccolo miglioramento nella dimensione */
+  transition: color 0.3s ease;
+  background-color: transparent; /* Rimuove il colore di sfondo */
+  border: none;
+}
+
+/* Colore verde per hover delle icone a destra */
+.right-controls .btn:hover {
+  color: #1DB954; /* Verde Spotify */
+}
+
+/* Controllo del volume */
+.volume-controls {
+  display: flex;
+  align-items: center;
+}
+
+/* Slider del volume */
+.volume-slider {
+  width: 100px; /* Rende il volume slider più visibile */
+  margin-left: 10px;
+}
+
+/* Centrare il contenuto del player */
+.song-info {
+  display: flex;
+  align-items: center;
+}
+
+/* Cover della canzone */
+.song-cover {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+/* Dettagli della canzone */
+.song-details h6,
+.song-details p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Per la responsività del player */
+@media (max-width: 768px) {
+  .music-player {
+    padding: 10px 15px;
+  }
+
+  .song-info {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .song-cover {
+    width: 50px; /* Ridotto per dispositivi più piccoli */
+  }
+
+  .right-controls .btn {
+    font-size: 12px; /* Rimpicciolire le icone */
+  }
+
+  .progress-container {
+    max-width: 80%;
+  }
+
+  /* Ridurre la dimensione dei controlli del player */
+  .player-controls .btn {
+    font-size: 18px; /* Rimpicciolire per schermi piccoli */
+  }
+}
+
 /* Pagina album  */
 @media (max-width: 767px) {
   .img-responsive {
