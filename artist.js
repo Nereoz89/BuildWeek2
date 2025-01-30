@@ -121,6 +121,8 @@ if (trackId) {
   loadTrack(trackId);
 }
 
+// codice per generare artista e tracce
+
 const addressBarContent = new URLSearchParams(window.location.search);
 const artistId = addressBarContent.get("artistId");
 
