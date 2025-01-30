@@ -32,7 +32,7 @@ function displayResults(data) {
 
   data.data.forEach((track) => {
     const trackElement = document.createElement("div");
-    trackElement.classList.add("col-md-4", "mb-4");
+    trackElement.classList.add("col-md-6", "mb-4");
 
     trackElement.innerHTML = `
       <div class="card bg-dark text-white">
