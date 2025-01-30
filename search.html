@@ -23,13 +23,13 @@
         >
           <ul class="nav justify-content-around">
             <li class="nav-item text-center">
-              <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
+              <a href="./index.html" class="nav-link text-white d-flex flex-column align-items-center">
                 <i class="bi bi-house-door-fill me-2 fs-3"></i>
                 <span>Home</span>
               </a>
             </li>
             <li class="nav-item text-center">
-              <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
+              <a href="./search.html" class="nav-link text-white d-flex flex-column align-items-center">
                 <i class="bi bi-search me-2 fs-3"></i>
                 <span>Cerca</span>
               </a>
@@ -62,10 +62,11 @@
               </li>
               <li class="nav-item d-flex align-items-center">
                 <span><i class="bi bi-house-door-fill"></i></span
-                ><a class="nav-link active text-white fw-bold" aria-current="page" href="#"> Home</a>
+                ><a class="nav-link text-white" aria-current="page" href="./index.html"> Home</a>
               </li>
               <li class="nav-item d-flex align-items-center">
-                <span><i class="bi bi-search"></i></span><a class="nav-link text-white" href="#"> Cerca</a>
+                <span><i class="bi bi-search" aria-current="page"></i></span
+                ><a class="nav-link text-white active fw-bold" href="./search.html"> Cerca</a>
               </li>
               <li class="nav-item d-flex align-items-center">
                 <span><i class="bi bi-collection-fill"></i></span
@@ -136,9 +137,9 @@
           </div>
         </div>
 
-        <div id="mainDiv" class="col-12 col-md-7" style="background: linear-gradient(to bottom, #252525, #121212)">
-          <div class="text-start mb-4">
-            <h1 class="mb-3">Cerca</h1>
+        <div id="mainDiv" class="col-12 col-md-7 p-4" style="background: linear-gradient(to bottom, #252525, #121212)">
+          <div class="text-start mb-4" id="prova">
+            <h3 class="mb-4">Cerca</h3>
             <div class="d-flex">
               <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-search"></i></span>
@@ -150,7 +151,7 @@
             </div>
           </div>
           <div>
-            <h5 class="my-3 d-flex justify-content-center">Sfoglia tutto</h5>
+            <h5 class="d-flex justify-content-center mt-5 mb-4" style="font-size: 1.8rem">Sfoglia tutto</h5>
           </div>
           <div class="row mt-3">
             <div class="col-6 mb-1">
@@ -202,7 +203,7 @@
                 style="width: 100%; height: auto; border-radius: 5%; margin-bottom: 5%"
               />
             </div>
-            <div class="col-6 mb-1">
+            <div class="col-6 mb-4">
               <img
                 src="./assets/imgs/search/classiche.PNG"
                 alt="Classica"
