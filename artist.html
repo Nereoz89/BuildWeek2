@@ -23,8 +23,34 @@
   <body class="text-white">
     <div class="container-fluid">
       <div class="row">
-        <!-- Sidebar (uguale alla homepage) -->
-        <div class="col-3 pt-3 ps-4" style="background-color: rgb(0, 0, 0)">
+        <!-- Navbar su dispositivi mobile -->
+        <div
+          class="d-block d-md-none position-fixed bottom-0 w-100"
+          style="z-index: 9999; background-color: rgba(0, 0, 0, 0.205); box-shadow: 0 4px 6px rgb(0, 0, 0)"
+        >
+          <ul class="nav justify-content-around">
+            <li class="nav-item text-center">
+              <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
+                <i class="bi bi-house-door-fill me-2 fs-3"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="nav-item text-center">
+              <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
+                <i class="bi bi-search me-2 fs-3"></i>
+                <span>Cerca</span>
+              </a>
+            </li>
+            <li class="nav-item text-center">
+              <a href="#" class="nav-link text-white d-flex flex-column align-items-center">
+                <i class="bi bi-collection-fill me-2 fs-3"></i>
+                <span>La tua libreria</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-none d-md-block col-md-3 pt-3 ps-4 p-4" style="background-color: rgb(0, 0, 0)">
           <div>
             <ul class="nav flex-column">
               <li>
@@ -43,7 +69,7 @@
               </li>
               <li class="nav-item d-flex align-items-center">
                 <span><i class="bi bi-house-door-fill"></i></span
-                ><a class="nav-link active text-white fw-bold" aria-current="page" href="./index.html"> Home</a>
+                ><a class="nav-link active text-white fw-bold" aria-current="page" href="#"> Home</a>
               </li>
               <li class="nav-item d-flex align-items-center">
                 <span><i class="bi bi-search"></i></span><a class="nav-link text-white" href="./search.html"> Cerca</a>
@@ -89,7 +115,26 @@
               <li class="mt-1 mb-1"><a href=""></a>𝙼𝚢 𝚆𝚘𝚛𝚕𝚍 ♡︎☁︎</li>
               <li class="mt-1 mb-1"><a href=""></a>Hi world ツ</li>
               <li class="mt-1 mb-1"><a href=""></a>★𝓓𝓪𝓻𝓴𝓢𝓽𝓪𝓻™★</li>
-              <li class="mt-1 mb-1"><a href=""></a>🆆🆁🅸🆃🅴 🅼🅴 🆂🅾🅼🅴🆃🅷🅸🅽🅶</li>
+              <li class="mt-1 mb-1">
+                <a href=""></a>Let's fine something better to do 'cause i'm mentally exausted 🌍
+              </li>
+              <li class="mt-1 mb-1"><a href=""></a>Around the world 🌍</li>
+              <li class="mt-1 mb-1"><a href=""></a>🦋💸Hight life💸🦋</li>
+              <li class="mt-1 mb-1"><a href=""></a>Go to the end of the world</li>
+              <li class="mt-1 mb-1"><a href=""></a>🎶 {•I just need music•} 🎶</li>
+              <li class="mt-1 mb-1"><a href=""></a>based on true stories</li>
+              <li class="mt-1 mb-1"><a href=""></a>🏕️my-heart-is-on🏕️</li>
+              <li class="mt-1 mb-1"><a href=""></a>Hype🤙🏻🔆</li>
+              <li class="mt-1 mb-1"><a href=""></a>Maracaibooooo</li>
+              <li class="mt-1 mb-1"><a href=""></a>Rock</li>
+              <li class="mt-1 mb-1"><a href=""></a>In my mood</li>
+              <li class="mt-1 mb-1"><a href=""></a>Casino</li>
+              <li class="mt-1 mb-1"><a href=""></a>festa</li>
+              <li class="mt-1 mb-1"><a href=""></a>ascoltala ebbasta</li>
+              <li class="mt-1 mb-1"><a href=""></a>🔮~ᴘᴜʀᴘʟᴇ ᴍᴜꜱɪᴄ~⭐</li>
+              <li class="mt-1 mb-1"><a href=""></a>𝙼𝚢 𝚆𝚘𝚛𝚕𝚍 ♡︎☁︎</li>
+              <li class="mt-1 mb-1"><a href=""></a>Hi world ツ</li>
+              <li class="mt-1 mb-1"><a href=""></a>★𝓓𝓪𝓻𝓴𝓢𝓽𝓪𝓻™★</li>
               <li class="mt-1 mb-1">
                 <a href=""></a>Let's fine something better to do 'cause i'm mentally exausted 🌍
               </li>
@@ -98,40 +143,88 @@
           </div>
         </div>
 
-        <div id="mainDiv" class="col-7" style="background: linear-gradient(to bottom, #252525, #121212); padding: 20px">
+        <div id="mainDiv" class="col-12 col-md-7" style="background: linear-gradient(to bottom, #252525, #121212)">
           <!-- Sezione dinamicamente popolata -->
           <div class="container-fluid d-flex flex-column flex-md-row pb-3" id="secondContent"></div>
           <!-- Sezione icone -->
-          <div class="d-flex justify-content-start align-items-center ms-3">
-            <i class="colorSpotify bi bi-play-circle-fill fs-1 me-4"></i>
-            <div class="border p-2 me-4">FOLLOWING</div>
-            <i class="bi bi-three-dots"></i>
+          <div class="d-flex align-items-center justify-content-between ms-3">
+            <div class="d-inline-flex align-items-center">
+              <i class="colorSpotify bi bi-play-circle-fill fs-1 me-4 d-none d-md-block"></i>
+              <div
+                class="border me-4"
+                style="
+                  font-size: 0.7rem;
+                  font-weight: bold;
+                  padding-top: 0.3rem;
+                  padding-bottom: 0.2rem;
+                  padding-left: 1rem;
+                  padding-right: 1rem;
+                "
+              >
+                FOLLOWING
+              </div>
+              <i class="bi bi-three-dots"></i>
+            </div>
+
+            <div class="d-flex justify-content-end align-items-center d-md-none">
+              <i class="bi bi-shuffle fs-3 ms-3 colorSpotify"></i>
+              <i class="colorSpotify bi bi-play-circle-fill fs-1 ms-3 me-4"></i>
+            </div>
+          </div>
+          <!-- Sezione Destra: Brani che ti piacciono MOBILE-->
+          <div class="d-flex justify-content-between mt-3 d-md-none">
+            <div class="d-flex align-items-center mt-2 mb-4 ms-3" style="position: relative">
+              <img
+                src="https://m.media-amazon.com/images/I/71ov-DhyciL._UF1000,1000_QL80_.jpg"
+                alt="Canzone"
+                class="rounded-circle me-2"
+                style="width: 50px; height: 50px"
+              />
+              <i
+                class="bi bi-heart-fill"
+                style="position: absolute; bottom: -10px; left: 31px; font-size: 1rem; color: #1ed760"
+              ></i>
+              <div style="font-size: 0.75rem">
+                <p class="m-0 text-white">Brani che ti piacciono</p>
+                <small class="text-secondary">8 Brani di AC/DC </small>
+              </div>
+            </div>
           </div>
 
           <!-- Sezione Canzoni -->
-          <div style="display: flex; justify-content: space-between; margin-top: 20px">
-            <div class="row mt-4 align-items-center" id="albumContent"></div>
+          <div class="left-text d-flex justify-content-between align-items-center mt-3 ms-4 fs-4 fw-bold">
+            <p class="m-0">Popolari</p>
+            <p class="m-0 d-none d-md-block">Brani che ti piacciono</p>
+          </div>
 
-            <!-- Sezione Destra: Brani che ti piacciono -->
-            <div style="width: 35%; padding: 20px; border-radius: 10px">
-              <h3 style="font-size: 20px; margin-bottom: 15px; color: white">Brani che ti piacciono</h3>
-              <div style="display: flex; align-items: center; margin-bottom: 15px">
-                <img
-                  src="https://images.squarespace-cdn.com/content/v1/633ca5b0779be916e13bb32c/7bab7381-7f42-4658-b2cd-ef554e163217/Yellowcard-band-social-sharing-image.jpg"
-                  alt="Canzone"
-                  style="width: 50px; height: 50px; border-radius: 100%; margin-right: 10px"
-                />
-                <div>
-                  <p style="margin: 0; font-size: 10px; color: white">Hai messo mi piace a 11 canzoni</p>
-                  <small style="color: #b3b3b3; font-size: 10px">Di Yellowcard</small>
+          <div style="display: flex; justify-content: space-between" class="flex-column flex-md-row">
+            <div class="row col-12 col-md-8 mt-4 align-items-center" id="albumContent"></div>
+
+            <!-- Sezione Destra: Brani che ti piacciono Desktop-->
+            <div class="col-md-4 rounded mt-4 ps-4">
+              <div class="d-flex align-items-center mt-2 mb-5 ms-3 d-none d-md-flex">
+                <div class="position-relative" style="width: 50px; height: 50px; flex-shrink: 0">
+                  <img
+                    src="https://m.media-amazon.com/images/I/71ov-DhyciL._UF1000,1000_QL80_.jpg"
+                    alt="Canzone"
+                    class="rounded-circle w-100 h-100"
+                  />
+                  <i
+                    class="bi bi-heart-fill position-absolute"
+                    style="bottom: 0; right: 0; transform: translate(30%, 30%); font-size: 1rem; color: #1ed760"
+                  ></i>
+                </div>
+
+                <div class="ms-3 text-white">
+                  <p class="m-0 text-nowrap">Hai messo Mi piace a 11 brani</p>
+                  <small class="text-secondary text-nowrap">8 Brani di Yellowcard</small>
                 </div>
               </div>
-              <!-- Aggiungi altre canzoni qui -->
             </div>
           </div>
         </div>
 
-        <div class="col-2" style="background-color: black">
+        <div class="d-none d-md-block col-md-2" style="background-color: black">
           <div class="mt-4">
             <div class="d-flex justify-content-between align-items-center">
               <h4 class="text-white" style="font-size: 15px; margin-bottom: 0">Attività amici</h4>

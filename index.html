@@ -146,9 +146,29 @@
 
         <div id="mainDiv" class="col-12 col-md-7" style="background: linear-gradient(to bottom, #252525, #121212)">
           <div class="d-none d-md-flex justify-content-between align-items-center">
-            <div class="col-3 pt-3 align-items-center">
-              <i class="fas fa-chevron-circle-left fs-3 me-3" style="color: #000000"></i>
-              <i class="fas fa-chevron-circle-right fs-3" style="color: #000000"></i>
+            <div class="pt-3 d-none d-md-flex align-items-center ms-0">
+              <i
+                class="fas fa-chevron-left p-3 rounded-circle me-2"
+                style="
+                  width: 20px;
+                  height: 20px;
+                  background-color: #131313a6;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></i>
+              <i
+                class="fas fa-chevron-right text-white p-3 rounded-circle ms-2"
+                style="
+                  width: 20px;
+                  height: 20px;
+                  background-color: #131313a6;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></i>
             </div>
 
             <div class="dropdown pt-3">
@@ -182,7 +202,8 @@
               class="d-flex mt-3 mb-3"
               style="
                 background: linear-gradient(to right, rgb(0, 0, 0), rgba(97, 97, 97, 0));
-                height: 15em;
+                max-height: 15%;
+                width: auto;
                 box-sizing: border-box;
               "
             >
@@ -377,9 +398,9 @@
         </div>
       </div>
     </div>
-    <footer class="music-player">
+
+    <footer class="music-player d-none d-md-flex">
       <div class="container-fluid d-flex align-items-center justify-content-between">
-        <!-- Info Canzone -->
         <div class="song-info d-flex align-items-center">
           <img
             src="https://cdn.iconscout.com/icon/free/png-256/free-spotify-logo-icon-download-in-svg-png-gif-file-formats--70-flat-social-icons-color-pack-logos-432546.png "
@@ -391,7 +412,6 @@
           </div>
         </div>
 
-        <!-- Controlli Player (centrati) -->
         <div class="center-controls d-flex align-items-center justify-content-center">
           <div class="player-controls-container">
             <div class="player-controls d-flex align-items-center justify-content-center">
@@ -401,7 +421,7 @@
               <button class="btn"><i class="bi bi-skip-end-fill"></i></button>
               <button class="btn"><i class="bi bi-repeat"></i></button>
             </div>
-            <!-- Barra Avanzamento -->
+
             <div class="progress-container d-flex align-items-center">
               <span class="current-time">0:00</span>
               <input type="range" class="progress-bar" min="0" max="100" value="0" />
@@ -410,24 +430,59 @@
           </div>
         </div>
 
-        <!-- Volume, Icone Extra e Ingrandimento -->
         <div class="right-controls d-flex align-items-center">
-          <!-- Icone extra -->
           <button class="btn"><i class="bi bi-pencil"></i></button>
           <button class="btn"><i class="bi bi-list"></i></button>
           <button class="btn"><i class="bi bi-pc-display"></i></button>
-
-          <!-- Volume -->
           <div class="volume-controls d-flex align-items-center">
             <button class="btn"><i class="bi bi-volume-up"></i></button>
             <input type="range" class="volume-slider" />
           </div>
-
-          <!-- Ingrandimento -->
           <button class="btn expand-btn"><i class="bi bi-arrows-angle-expand"></i></button>
         </div>
       </div>
     </footer>
+
+    <footer class="music-player-mobile d-flex d-md-none bg-dark text-white py-2 px-3">
+      <div class="d-flex justify-content-between align-items-center w-100">
+        <div class="song-details">
+          <h6 class="song-title m-0">Nome Canzone</h6>
+          <p class="song-artist m-0 text-muted" style="font-size: 0.85rem">Nome Artista</p>
+        </div>
+
+        <div class="right-icons d-flex align-items-center gap-3">
+          <button class="btn text-white">
+            <i class="bi bi-music-player" style="font-size: 1.5rem"></i>
+          </button>
+
+          <button class="btn text-white" id="heart-icon">
+            <i class="bi bi-heart" style="font-size: 1.5rem"></i>
+            <i class="bi bi-heart-fill" style="font-size: 1.5rem; display: none"></i>
+          </button>
+
+          <button class="btn play-btn text-white" id="play-icon">
+            <i class="bi bi-play-fill" style="font-size: 2rem"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("heart-icon").addEventListener("click", function () {
+        this.classList.toggle("clicked");
+      });
+
+      document.getElementById("play-icon").addEventListener("click", function () {
+        this.classList.toggle("clicked");
+
+        const icon = this.querySelector("i");
+        if (this.classList.contains("clicked")) {
+          icon.style.color = "#1ed760";
+        } else {
+          icon.style.color = "";
+        }
+      });
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

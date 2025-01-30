@@ -180,14 +180,61 @@ const generateDetails = (details) => {
     maximumFractionDigits: 2,
   };
   secondRow.innerHTML = `
-  <div class="d-flex justify-content-center mt-4">
-    <img src="${details.picture_big}" crossorigin="anonymous" alt="img" width="70%" id="myImg"/>
+  <div class="d-flex justify-content-between align-items-center ms-3 position-relative" style="background-image: url('${
+    details.picture_big
+  }'); background-size: cover; background-position: center; width: 100%; height: 400px; margin: 0; padding: 0;" id="myImg">
+    
+    <!-- Contenitore delle icone -->
+    <div class="d-flex align-items-center pt-3 position-absolute top-0 start-0 z-index-3">
+      <i
+        class="fas fa-chevron-left p-3 rounded-circle me-2 "
+        style="width: 20px; height: 20px; background-color: #131313a6; display: flex; align-items: center; justify-content: center; z-index: 5;"
+      ></i>
+      <i
+        class="fas fa-chevron-right text-white p-3 rounded-circle ms-2 d-none d-md-flex"
+        style="width: 20px; height: 20px; background-color: #131313a6; display: flex; align-items: center; justify-content: center; z-index: 5;"
+      ></i>
+    </div>
+    <!-- Contenitore del dropdown -->
+    <div class="dropdown ms-auto pt-3 position-absolute top-0 end-0 d-none d-md-block" style="z-index: 10">
+      <button
+        class="btn btn-sm btn-secondary dropdown-toggle d-flex align-items-center rounded-pill bg-dark"
+        type="button"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        style="z-index: 10;"
+      >
+        <img
+          src="https://plus.unsplash.com/premium_photo-1737659254856-bb79e14b3ea5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
+          alt="Lidia"
+          width="25"
+          height="25"
+          class="rounded-circle me-2"
+        />
+        <span>Lidia Nautilus</span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="z-index: 20;">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+
+    <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120%; height: 100%; z-index: 1;">
+      <img src="${details.picture_big}" alt="Image" style="width: 100%; height: 100%; object-fit: cover;" />
+    </div>
+
+    <div class="d-flex flex-column justify-content-end ps-3 ps-md-0 ms-2 position-absolute text-white" style="bottom: 0; left: 0; z-index: 5;">
+      <p class="d-none d-md-block d-inline-flex align-items-center mb-1">
+        <i class="bi bi-patch-check-fill text-primary me-2"></i>
+        Artista verificato
+      </p>
+      <h1 style="font-size: 3rem; font-weight: 900;">${details.name}</h1>
+      <p>Ascoltatori mensili: ${details.nb_fan.toLocaleString("it-IT", options)}</p>
+    </div>
   </div>
-  <div class="d-flex flex-column justify-content-end ps-3 ps-md-0">
-    <h1 class="mt-4 fs-md-4">${details.name}</h1>
-    <p> Ascoltatori mensili: ${details.nb_fan.toLocaleString("it-IT", options)}
-  </div>
-  `;
+`;
 };
 
 //  TRACKS
@@ -206,19 +253,24 @@ const generateTracks = (tracks) => {
       content.classList.add("d-flex", "align-items-center");
       content.innerHTML = `
     <div class="col col-md-8 d-flex justify-content-between">
-       <div>
-         <h6 class="mb-4 pe-3">${el.title}</h6>
+       <div >
+         <h6 class="mb-4 ms-4 pe-3">${el.title}</h6>
        </div>
        <div class="d-flex align-items-center">
          <i
            style="font-size: 1.5em"
            class="bi bi-three-dots-vertical d-md-none"
          ></i>
-         <p class="mb-0 d-none d-md-block">${el.rank.toLocaleString("it-IT", options)}</p>
+         <p class="mb-0 d-none d-md-block text-secondary" style="font-size: 0.8em;">${el.rank.toLocaleString(
+           "it-IT",
+           options
+         )}</p>
        </div>
       </div>
        <div class="col d-flex justify-content-end d-none d-md-flex">
-          <p class="mb-0 d-none d-md-block">${Math.floor(el.duration / 60)}:${seconds}</p>
+          <p class="mb-0 d-none d-md-block me-3 text-secondary"  style="font-size: 0.8em;">${Math.floor(
+            el.duration / 60
+          )}:${seconds}</p>
         </div>
     `;
 

@@ -55,7 +55,7 @@
 
 /* Blocco centrale home*/
 div > h5 {
-  font-size: 2.5em;
+  font-size: 2.3em;
 }
 
 .viewAll {
@@ -78,11 +78,6 @@ div > h5 {
 .me-3 {
   margin-right: 1rem;
 }
-
-
-
-
-
 
 /* Stile per il player musicale fisso in basso */
 .music-player {
@@ -149,7 +144,7 @@ div > h5 {
 /* Colore verde per hover e focus delle icone */
 .player-controls .btn:hover i,
 .player-controls .btn:focus i {
-  color: #1DB954; /* Verde Spotify */
+  color: #1db954; /* Verde Spotify */
 }
 
 /* Contenitore della barra di progresso */
@@ -206,7 +201,7 @@ div > h5 {
 
 /* Colore verde per hover delle icone a destra */
 .right-controls .btn:hover {
-  color: #1DB954; /* Verde Spotify */
+  color: #1db954; /* Verde Spotify */
 }
 
 /* Controllo del volume */
@@ -265,13 +260,11 @@ div > h5 {
     max-width: 80%;
   }
 
-  /* Ridurre la dimensione dei controlli del player */
   .player-controls .btn {
     font-size: 18px; /* Rimpicciolire per schermi piccoli */
   }
 }
 
-/* Pagina album  */
 @media (max-width: 767px) {
   .img-responsive {
     width: 70%;
@@ -287,4 +280,54 @@ div > h5 {
 
 #albumCard {
   background-color: #161616;
+}
+
+.music-player-mobile {
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  width: 94%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 3%;
+  background-color: #181818;
+  z-index: 1050;
+  border-radius: 10px;
+}
+
+.music-player-mobile .song-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.music-player-mobile .right-icons .btn {
+  background: none;
+  border: none;
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.music-player-mobile .right-icons .btn:hover {
+  color: #1ed760;
+  transform: scale(1.2);
+}
+
+#heart-icon i {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#heart-icon.clicked i {
+  color: red;
+}
+
+#play-icon i {
+  font-size: 2rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#play-icon.clicked i {
+  color: #1ed760;
 }
