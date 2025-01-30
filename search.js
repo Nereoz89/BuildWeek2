@@ -6,7 +6,7 @@ const apiUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 function searchMusic() {
   const query = searchQueryInput.value.trim();
   if (!query) {
-    alert("Please enter a search term.");
+    alert("Inserisci una canzone nella barra di ricerca.");
     return;
   }
 
@@ -18,19 +18,19 @@ function searchMusic() {
     .then((data) => displayResults(data))
     .catch((error) => {
       console.error("Error fetching data:", error);
-      resultsContainer.innerHTML = "<p>Sorry, something went wrong.</p>";
+      resultsContainer.innerHTML = "<p>Spiacenti, qualcosa è andato storto.</p>";
     });
 }
 
 function displayResults(data) {
   if (data.data.length === 0) {
-    resultsContainer.innerHTML = "<p>No results found.</p>";
+    resultsContainer.innerHTML = "<p>Nessun risultato trovato.</p>";
     return;
   }
 
   resultsContainer.innerHTML = ""; // Svuota i risultati
 
-  const rowElement = document.createElement("div"); 
+  const rowElement = document.createElement("div");
   rowElement.classList.add("row"); // Contenitore per le card
 
   data.data.forEach((track) => {
