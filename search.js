@@ -30,7 +30,7 @@ function displayResults(data) {
 
   resultsContainer.innerHTML = ""; // Svuota i risultati
 
-  const rowElement = document.createElement("div"); 
+  const rowElement = document.createElement("div");
   rowElement.classList.add("row"); // Contenitore per le card
 
   data.data.forEach((track) => {
@@ -38,14 +38,15 @@ function displayResults(data) {
     trackElement.classList.add("col-12", "col-md-6", "mb-4"); // 2 per riga su schermi medi e grandi
 
     trackElement.innerHTML = `
-      <div class="card bg-dark text-white h-100">
-        <img src="${track.album.cover}" class="card-img-top" alt="${track.title}">
-        <div class="card-body d-flex flex-column">
+       <div class="card bg-dark text-white" style="max-width: 90%; margin: 0 auto;">
+        <img src="${track.album.cover}" class="card-img-top" alt="${track.title}" style="height: 150px; object-fit: cover;">
+        <div class="card-body" style="padding: 10px;">
           <h5 class="card-title">${track.title}</h5>
           <p class="card-text">Artist: ${track.artist.name}</p>
-          <a href="${track.link}" class="btn btn-primary mt-auto" target="_blank">Listen</a>
+          <a href="${track.link}" class="btn btn-primary" target="_blank">Listen</a>
         </div>
       </div>
+    
     `;
 
     rowElement.appendChild(trackElement);
