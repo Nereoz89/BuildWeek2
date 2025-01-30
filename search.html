@@ -141,76 +141,193 @@
           <div class="text-start mb-4" id="prova">
             <h3 class="mb-4">Cerca</h3>
             <div class="d-flex">
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-search"></i></span>
-                <input type="text" id="searchQuery" class="form-control me-3" placeholder="Cosa vuoi ascoltare?" />
+              <div class="input-group" style="background-color: #1b1b1b; width: 100%">
+                <i class="bi bi-search ms-2 fs-4 text-white" onclick="searchMusic()"></i>
+                <input
+                  type="text"
+                  id="searchQuery"
+                  class="form-control me-3 border-0 ps-3 text-white"
+                  placeholder="Cosa vuoi ascoltare?"
+                  style="background-color: #1b1b1b"
+                />
               </div>
-              <button type="button" class="btn btn-light btn-lg mt-3" onclick="searchMusic()">
-                <i class="bi bi-search"></i>
-              </button>
             </div>
           </div>
           <div>
             <h5 class="d-flex justify-content-center mt-5 mb-4" style="font-size: 1.8rem">Sfoglia tutto</h5>
+            <div class="row g-3">
+              <!-- Card  -->
+              <div class="col-6">
+                <div
+                  class="d-flex flex-column justify-content-between p-3 rounded text-white position-relative"
+                  style="height: 90px; overflow: hidden; background-color: #e13300"
+                >
+                  <span class="fw-bold align-self-start fs-5">Podcast</span>
+                  <div class="position-absolute" style="bottom: 0; right: 0; max-width: 70px; height: 70px">
+                    <img
+                      src="./assets/imgs/search/image-2.jpg"
+                      class="rounded ms-2"
+                      style="width: 100%; height: 100%; transform: rotate(25deg)"
+                      alt="Immagine 1"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div
+                  class="d-flex flex-column justify-content-between p-3 rounded text-white position-relative"
+                  style="height: 90px; overflow: hidden; background-color: #1e3264"
+                >
+                  <span class="fw-bold align-self-start fs-5">Creata per te</span>
+                  <div class="position-absolute" style="bottom: 0; right: 0; max-width: 70px; height: 70px">
+                    <img
+                      src="./assets/imgs/search/image-42.png"
+                      class="rounded ms-2"
+                      style="width: 100%; height: 100%; transform: rotate(25deg)"
+                      alt="Immagine 2"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div
+                  class="d-flex flex-column justify-content-between p-3 rounded text-white position-relative"
+                  style="height: 90px; overflow: hidden; background-color: #e8125c"
+                >
+                  <span class="fw-bold align-self-start fs-5">Nuove uscite</span>
+                  <div class="position-absolute" style="bottom: 0; right: 0; max-width: 70px; height: 70px">
+                    <img
+                      src="./assets/imgs/search/image-26.jpg"
+                      class="rounded ms-2"
+                      style="width: 100%; height: 100%; transform: rotate(25deg)"
+                      alt="Immagine 3"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div
+                  class="d-flex flex-column justify-content-between p-3 rounded text-white position-relative"
+                  style="height: 90px; overflow: hidden; background-color: #158a08"
+                >
+                  <span class="fw-bold align-self-start fs-5">Pop</span>
+                  <div class="position-absolute" style="bottom: 0; right: 0; max-width: 70px; height: 70px">
+                    <img
+                      src="./assets/imgs/search/image-47.jpg"
+                      class="rounded ms-2"
+                      style="width: 100%; height: 100%; transform: rotate(25deg)"
+                      alt="Immagine 4"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div
+                  class="d-flex flex-column justify-content-between p-3 rounded text-white position-relative"
+                  style="height: 90px; overflow: hidden; background-color: #b95900"
+                >
+                  <span class="fw-bold align-self-start fs-5">Hip Hop</span>
+                  <div class="position-absolute" style="bottom: 0; right: 0; max-width: 70px; height: 70px">
+                    <img
+                      src="./assets/imgs/search/image-49.jpg"
+                      class="rounded ms-2"
+                      style="width: 100%; height: 100%; transform: rotate(25deg)"
+                      alt="Immagine 5"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div
+                  class="d-flex flex-column justify-content-between p-3 rounded text-white position-relative"
+                  style="height: 90px; overflow: hidden; background-color: #da0505"
+                >
+                  <span class="fw-bold align-self-start fs-5">Dance/Elettronica</span>
+                  <div class="position-absolute" style="bottom: 0; right: 0; max-width: 70px; height: 70px">
+                    <img
+                      src="./assets/imgs/search/image-33.jpg"
+                      class="rounded ms-2"
+                      style="width: 100%; height: 100%; transform: rotate(25deg)"
+                      alt="Immagine 6"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div
+                  class="d-flex flex-column justify-content-between p-3 rounded text-white position-relative"
+                  style="height: 90px; overflow: hidden; background-color: #e1118b"
+                >
+                  <span class="fw-bold align-self-start fs-5">Latina</span>
+                  <div class="position-absolute" style="bottom: 0; right: 0; max-width: 70px; height: 70px">
+                    <img
+                      src="./assets/imgs/search/image-5.jpg"
+                      class="rounded ms-2"
+                      style="width: 100%; height: 100%; transform: rotate(25deg)"
+                      alt="Immagine 7"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div
+                  class="d-flex flex-column justify-content-between p-3 rounded text-white position-relative"
+                  style="height: 90px; overflow: hidden; background-color: #8c67ac"
+                >
+                  <span class="fw-bold align-self-start fs-5">Classifiche</span>
+                  <div class="position-absolute" style="bottom: 0; right: 0; max-width: 70px; height: 70px">
+                    <img
+                      src="./assets/imgs/search/image-14.jpg"
+                      class="rounded ms-2"
+                      style="width: 100%; height: 100%; transform: rotate(25deg)"
+                      alt="Immagine 8"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div
+                  class="d-flex flex-column justify-content-between p-3 rounded text-white position-relative"
+                  style="height: 90px; overflow: hidden; background-color: #5b0e8f"
+                >
+                  <span class="fw-bold align-self-start fs-5">Classica</span>
+                  <div class="position-absolute" style="bottom: 0; right: 0; max-width: 70px; height: 70px">
+                    <img
+                      src="./assets/imgs/search/image-29.jpg"
+                      class="rounded ms-2"
+                      style="width: 100%; height: 100%; transform: rotate(25deg)"
+                      alt="Immagine 9"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div
+                  class="d-flex flex-column justify-content-between p-3 rounded text-white position-relative"
+                  style="height: 90px; overflow: hidden; background-color: #b3a20e"
+                >
+                  <span class="fw-bold align-self-start fs-5">Metal</span>
+                  <div class="position-absolute" style="bottom: 0; right: 0; max-width: 70px; height: 70px">
+                    <img
+                      src="./assets/imgs/search/image-31.jpg"
+                      class="rounded ms-2"
+                      style="width: 100%; height: 100%; transform: rotate(25deg)"
+                      alt="Immagine 10"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="row mt-3">
-            <div class="col-6 mb-1">
-              <img
-                src="./assets/imgs/search/Podcast.PNG"
-                alt="Podcast"
-                style="width: 100%; height: 90%; border-radius: 5%; margin-bottom: 5%"
-              />
-            </div>
-            <div class="col-6 mb-1">
-              <img
-                src="./assets/imgs/search/create-2.PNG"
-                alt="Create per te"
-                style="width: 100%; height: auto; border-radius: 5%; margin-bottom: 5%"
-              />
-            </div>
-            <div class="col-6 mb-1">
-              <img
-                src="./assets/imgs/search/Nuove uscite.PNG"
-                alt="Nuove uscite"
-                style="width: 100%; height: auto; border-radius: 5%; margin-bottom: 5%"
-              />
-            </div>
-            <div class="col-6 mb-1">
-              <img
-                src="./assets/imgs/search/Pop.PNG"
-                alt="Pop"
-                style="width: 100%; height: auto; border-radius: 5%; margin-bottom: 5%"
-              />
-            </div>
-            <div class="col-6 mb-1">
-              <img
-                src="./assets/imgs/search/Hip Hop.PNG"
-                alt="Hip Hop"
-                style="width: 100%; height: auto; border-radius: 5%; margin-bottom: 5%"
-              />
-            </div>
-            <div class="col-6 mb-1">
-              <img
-                src="./assets/imgs/search/Dance.PNG"
-                alt="Dance"
-                style="width: 100%; height: auto; border-radius: 5%; margin-bottom: 5%"
-              />
-            </div>
-            <div class="col-6 mb-1">
-              <img
-                src="./assets/imgs/search/Latina.PNG"
-                alt="Latina"
-                style="width: 100%; height: auto; border-radius: 5%; margin-bottom: 5%"
-              />
-            </div>
-            <div class="col-6 mb-4">
-              <img
-                src="./assets/imgs/search/classiche.PNG"
-                alt="Classica"
-                style="width: 100%; height: auto; border-radius: 5%; margin-bottom: 5%"
-              />
-            </div>
-          </div>
+
           <div id="resultsContainer" class="bt-5"></div>
         </div>
 

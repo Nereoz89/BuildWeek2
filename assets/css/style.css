@@ -331,3 +331,8 @@ div > h5 {
 #play-icon.clicked i {
   color: #1ed760;
 }
+
+/* colore placeholder input */
+#searchQuery::placeholder {
+  color: rgb(197, 197, 197);
+}
