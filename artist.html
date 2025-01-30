@@ -150,12 +150,12 @@
           <div class="d-flex justify-content-start align-items-center ms-3">
             <i class="colorSpotify bi bi-play-circle-fill fs-1 me-4"></i>
             <div
-              class="border p-2 me-4"
+              class="border me-4"
               style="
-                font-size: 0.8rem;
+                font-size: 0.7rem;
                 font-weight: bold;
-                padding-top: 0.5rem;
-                padding-bottom: 0.5rem;
+                padding-top: 0.3rem;
+                padding-bottom: 0.3rem;
                 padding-left: 1rem;
                 padding-right: 1rem;
               "
@@ -165,23 +165,30 @@
 
             <i class="bi bi-three-dots"></i>
           </div>
+          <div class="d-flex justify-content-between mt-3">
+            <div class="left-text ms-4 fs-5 fw-bold">Popolari</div>
+            <div class="right-text me-5 fs-5 fw-bold">Brani che ti piacciono</div>
+          </div>
 
           <!-- Sezione Canzoni -->
-          <div style="display: flex; justify-content: space-between; margin-top: 20px">
-            <div class="row col-9 mt-4 align-items-center" id="albumContent"></div>
+          <div style="display: flex; justify-content: space-between">
+            <div class="row col-8 mt-4 align-items-center" id="albumContent"></div>
 
             <!-- Sezione Destra: Brani che ti piacciono -->
-            <div class="col-3 p-3 rounded" style="background-color: #121212">
-              <h3 class="fs-5 mb-3 text-white">Brani che ti piacciono</h3>
-              <div class="d-flex align-items-center mb-3">
+            <div class="col-4 rounded mt-4 ps-4">
+              <div class="d-flex align-items-center mb-3 ms-5" style="position: relative">
                 <img
                   src="https://images.squarespace-cdn.com/content/v1/633ca5b0779be916e13bb32c/7bab7381-7f42-4658-b2cd-ef554e163217/Yellowcard-band-social-sharing-image.jpg"
                   alt="Canzone"
-                  class="rounded-circle me-2"
+                  class="rounded-circle me-2 ms-2"
                   style="max-width: 20%; height: auto"
                 />
-                <div>
-                  <p class="m-0 text-white fs-6">Hai messo mi piace a 11 canzoni</p>
+                <i
+                  class="bi bi-heart-fill"
+                  style="position: absolute; bottom: -10px; left: 40px; font-size: 1rem; color: #1ed760"
+                ></i>
+                <div style="font-size: 0.75rem">
+                  <p class="m-0 text-white">Hai messo mi piace a 11 brani</p>
                   <small class="text-secondary">Di Yellowcard</small>
                 </div>
               </div>

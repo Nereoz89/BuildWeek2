@@ -184,9 +184,9 @@ const generateDetails = (details) => {
     details.picture_big
   }'); background-size: cover; background-position: center; width: 100vw; height: 400px; margin: 0; padding: 0;" id="myImg">
     <div class="d-flex flex-column justify-content-end ps-3 ps-md-0  ms-2 position-absolute text-white" style="bottom: 0; left: 0; z-index: 1;">
-      <p><i class="bi bi-patch-check-fill text-primary me-2"></i>
+      <p><i class="bi bi-patch-check-fill text-primary me-2 "></i>
           Artista verificato</p>
-      <h1 class="fs-md-1">${details.name}</h1>
+      <h1 class="fs-md-" style="font-size: 3rem; font-weight: 900;">${details.name}</h1>
       <p>Ascoltatori mensili: ${details.nb_fan.toLocaleString("it-IT", options)}</p>
     </div>
   </div>
@@ -217,11 +217,14 @@ const generateTracks = (tracks) => {
            style="font-size: 1.5em"
            class="bi bi-three-dots-vertical d-md-none"
          ></i>
-         <p class="mb-0 d-none d-md-block" style="font-size: 0.8em;">${el.rank.toLocaleString("it-IT", options)}</p>
+         <p class="mb-0 d-none d-md-block text-secondary" style="font-size: 0.8em;">${el.rank.toLocaleString(
+           "it-IT",
+           options
+         )}</p>
        </div>
       </div>
        <div class="col d-flex justify-content-end d-none d-md-flex">
-          <p class="mb-0 d-none d-md-block me-3"  style="font-size: 0.8em;">${Math.floor(
+          <p class="mb-0 d-none d-md-block me-3 text-secondary"  style="font-size: 0.8em;">${Math.floor(
             el.duration / 60
           )}:${seconds}</p>
         </div>
