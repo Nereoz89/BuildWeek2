@@ -260,12 +260,10 @@ div > h5 {
     max-width: 80%;
   }
 
-
   .player-controls .btn {
     font-size: 18px; /* Rimpicciolire per schermi piccoli */
   }
 }
-
 
 @media (max-width: 767px) {
   .img-responsive {
@@ -284,19 +282,17 @@ div > h5 {
   background-color: #161616;
 }
 
-
-
 .music-player-mobile {
   position: fixed;
-  bottom: 60px; 
+  bottom: 60px;
   left: 0;
   width: 94%;
-  margin-left: 2%; 
-  margin-right: 2%; 
+  margin-left: 2%;
+  margin-right: 2%;
   margin-bottom: 3%;
   background-color: #181818;
   z-index: 1050;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .music-player-mobile .song-details {
@@ -312,27 +308,26 @@ div > h5 {
 }
 
 .music-player-mobile .right-icons .btn:hover {
-  color: #1ed760; 
-  transform: scale(1.2); 
+  color: #1ed760;
+  transform: scale(1.2);
 }
 
 #heart-icon i {
   font-size: 1.5rem;
-  color: white; 
+  color: white;
   transition: color 0.3s ease;
 }
 
 #heart-icon.clicked i {
-  color: red; 
+  color: red;
 }
 
 #play-icon i {
   font-size: 2rem;
-  color: white; 
+  color: white;
   transition: color 0.3s ease;
 }
 
 #play-icon.clicked i {
-  color: #1ed760; 
+  color: #1ed760;
 }
-

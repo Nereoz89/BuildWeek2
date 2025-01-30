@@ -182,7 +182,7 @@ const generateDetails = (details) => {
   secondRow.innerHTML = `
   <div class="d-flex justify-content-between align-items-center ms-3 position-relative" style="background-image: url('${
     details.picture_big
-  }'); background-size: cover; background-position: center; width: 100vw; height: 400px; margin: 0; padding: 0;" id="myImg">
+  }'); background-size: cover; background-position: center; width: 100%; height: 400px; margin: 0; padding: 0;" id="myImg">
     
     <!-- Contenitore delle icone -->
     <div class="d-flex align-items-center pt-3 position-absolute top-0 start-0 z-index-3">
