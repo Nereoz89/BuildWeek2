@@ -180,13 +180,57 @@ const generateDetails = (details) => {
     maximumFractionDigits: 2,
   };
   secondRow.innerHTML = `
-  <div class="d-flex justify-content-center mt-4 position-relative" style="background-image: url('${
+  <div class="d-flex justify-content-between align-items-center ms-3 position-relative" style="background-image: url('${
     details.picture_big
   }'); background-size: cover; background-position: center; width: 100vw; height: 400px; margin: 0; padding: 0;" id="myImg">
-    <div class="d-flex flex-column justify-content-end ps-3 ps-md-0  ms-2 position-absolute text-white" style="bottom: 0; left: 0; z-index: 1;">
-      <p><i class="bi bi-patch-check-fill text-primary me-2 "></i>
-          Artista verificato</p>
-      <h1 class="fs-md-" style="font-size: 3rem; font-weight: 900;">${details.name}</h1>
+    
+    <!-- Contenitore delle icone -->
+    <div class="d-flex align-items-center pt-3 position-absolute top-0 start-0 z-index-3">
+      <i
+        class="fas fa-chevron-left p-3 rounded-circle me-2 "
+        style="width: 20px; height: 20px; background-color: #131313a6; display: flex; align-items: center; justify-content: center; z-index: 5;"
+      ></i>
+      <i
+        class="fas fa-chevron-right text-white p-3 rounded-circle ms-2 d-none d-md-flex"
+        style="width: 20px; height: 20px; background-color: #131313a6; display: flex; align-items: center; justify-content: center; z-index: 5;"
+      ></i>
+    </div>
+    <!-- Contenitore del dropdown -->
+    <div class="dropdown ms-auto pt-3 position-absolute top-0 end-0 d-none d-md-block" style="z-index: 10">
+      <button
+        class="btn btn-sm btn-secondary dropdown-toggle d-flex align-items-center rounded-pill bg-dark"
+        type="button"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        style="z-index: 10;"
+      >
+        <img
+          src="https://plus.unsplash.com/premium_photo-1737659254856-bb79e14b3ea5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
+          alt="Lidia"
+          width="25"
+          height="25"
+          class="rounded-circle me-2"
+        />
+        <span>Lidia Nautilus</span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="z-index: 20;">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+
+    <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120%; height: 100%; z-index: 1;">
+      <img src="${details.picture_big}" alt="Image" style="width: 100%; height: 100%; object-fit: cover;" />
+    </div>
+
+    <div class="d-flex flex-column justify-content-end ps-3 ps-md-0 ms-2 position-absolute text-white" style="bottom: 0; left: 0; z-index: 5;">
+      <p class="d-none d-md-block d-inline-flex align-items-center mb-1">
+        <i class="bi bi-patch-check-fill text-primary me-2"></i>
+        Artista verificato
+      </p>
+      <h1 style="font-size: 3rem; font-weight: 900;">${details.name}</h1>
       <p>Ascoltatori mensili: ${details.nb_fan.toLocaleString("it-IT", options)}</p>
     </div>
   </div>
