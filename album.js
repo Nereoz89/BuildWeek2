@@ -19,7 +19,7 @@ fetch(`${url}${albumId}`, options)
     }
   })
   .then((data) => {
-    console.log(data);
+    /* console.log(data); */
     generateTracks(data);
     generateDetails(data);
   })
@@ -29,44 +29,6 @@ fetch(`${url}${albumId}`, options)
 
 const mainRow = document.getElementById("albumContent");
 const secondRow = document.getElementById("secondContent");
-
-//  TRACKS
-const generateTracks = (tracks) => {
-  tracks.tracks.data.forEach((el) => {
-    let seconds = el.duration % 60;
-    seconds = seconds.toString().padStart(2, "0");
-    const options = {
-      style: "decimal",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 2,
-    };
-
-    const content = document.createElement("div");
-    content.classList.add("d-flex", "align-items-center");
-    content.innerHTML = `
-      <div class="col col-md-8 d-flex justify-content-between ms-4 me-4">
-         <div>
-           <h6 class="mb-0">${el.title}</h6>
-           <p class='text-secondary mt-1' style="font-size: 0.8em;">${el.artist.name}</p>
-         </div>
-         <div class="d-flex align-items-center">
-           <i
-             style="font-size: 1.5em"
-             class="bi bi-three-dots-vertical d-md-none"
-           ></i>
-           <p class="mb-0 d-none d-md-block me-3" style="font-size: 0.8em;">${el.rank.toLocaleString(
-             "it-IT",
-             options
-           )}</p>
-         </div>
-        </div>
-         <div class="col d-flex justify-content-end d-none d-md-flex">
-            <p class="mb-0 d-none d-md-block " style="font-size: 0.8em;">${Math.floor(el.duration / 60)}:${seconds}</p>
-          </div>
-      `;
-    mainRow.appendChild(content);
-  });
-};
 
 //  ALBUM DETAILS
 const generateDetails = (details) => {
@@ -86,4 +48,83 @@ const generateDetails = (details) => {
     </div>
   </div>
 `;
+};
+
+//  TRACKS
+const generateTracks = (tracks) => {
+  tracks.tracks.data.forEach((el) => {
+    let seconds = el.duration % 60;
+    seconds = seconds.toString().padStart(2, "0");
+    const options = {
+      style: "decimal",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 2,
+    };
+
+    const content = document.createElement("div");
+    content.classList.add("d-flex", "align-items-center");
+    content.innerHTML = `
+      <div class="col col-md-8 d-flex justify-content-between ms-4 me-4">
+         <div class="detailPlayer" style="cursor: pointer;">
+           <h6 class="mb-0 ">${el.title}</h6>
+           <p class='text-secondary mt-1' style="font-size: 0.8em;">${el.artist.name}</p>
+         </div>
+         <div class="d-flex align-items-center">
+           <i
+             style="font-size: 1.5em"
+             class="bi bi-three-dots-vertical d-md-none"
+           ></i>
+           <p class="mb-0 d-none d-md-block me-3" style="font-size: 0.8em;">
+             ${el.rank.toLocaleString("it-IT", options)}
+           </p>
+         </div>
+        </div>
+         <div class="col d-flex justify-content-end d-none d-md-flex">
+            <p class="mb-0 d-none d-md-block " style="font-size: 0.8em;">
+              ${Math.floor(el.duration / 60)}:${seconds}
+            </p>
+          </div>
+      `;
+    mainRow.appendChild(content);
+
+    //Player
+
+    const playerImg = document.getElementById("playerCover");
+
+    // Aggiungi l'evento di click al nuovo elemento
+    content.querySelector(".detailPlayer").addEventListener("click", () => {
+      document.getElementById("playerTitle").textContent = el.title;
+      document.getElementById("playerArtist").textContent = el.artist.name;
+      playerImg.innerHTML = `<img src="${el.album.cover_medium}" style="max-height: 5em; margin-right: 10px;" />`;
+      document.getElementById("playerDuration").textContent = `${Math.floor(el.duration / 60)}:${seconds}`;
+
+      document.getElementById("playButton").addEventListener("click", () => {
+        const player = document.getElementById("player");
+        if (player.src !== el.preview) {
+          player.src = el.preview;
+          player.play();
+        } else {
+          if (player.paused) {
+            player.play();
+          } else {
+            player.pause();
+          }
+        }
+      });
+
+      // Aggiungi evento per aggiornare la barra di avanzamento
+      const player = document.getElementById("player");
+      player.addEventListener("timeupdate", () => {
+        const progressBar = document.getElementById("progressBar");
+        const progress = (player.currentTime / player.duration) * 100;
+        progressBar.value = progress;
+      });
+
+      // Aggiungi evento per controllare il volume
+      const volumeControl = document.getElementById("volumeControl");
+      volumeControl.addEventListener("input", () => {
+        player.volume = volumeControl.value;
+      });
+    });
+  });
 };
