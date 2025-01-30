@@ -332,7 +332,18 @@ div > h5 {
   color: #1ed760;
 }
 
-/* colore placeholder input */
+/* input cerca */
 #searchQuery::placeholder {
   color: rgb(197, 197, 197);
+}
+
+#searchQuery {
+  background-color: #1b1b1b;
+  color: white;
+}
+
+#searchQuery:focus {
+  background-color: #1b1b1b;
+  color: white;
+  outline: none; /* Per rimuovere il bordo che appare quando l'input è selezionato */
 }
