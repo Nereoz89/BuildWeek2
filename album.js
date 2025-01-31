@@ -52,7 +52,7 @@ const generateDetails = (details) => {
 
 //  TRACKS
 const generateTracks = (tracks) => {
-  tracks.tracks.data.forEach((el) => {
+  tracks.tracks.data.forEach((el, index) => {
     let seconds = el.duration % 60;
     seconds = seconds.toString().padStart(2, "0");
     const options = {
@@ -64,9 +64,10 @@ const generateTracks = (tracks) => {
     const content = document.createElement("div");
     content.classList.add("d-flex", "align-items-center");
     content.innerHTML = `
+    <div><p>${index + 1}</p></div>
       <div class="col col-md-8 d-flex justify-content-between ms-4 me-4">
-         <div class="detailPlayer" style="cursor: pointer;">
-           <h6 class="mb-0 ">${el.title}</h6>
+      <div class="detailPlayer" style="cursor: pointer;">
+         <h6 class="mb-0 ">${el.title}</h6>
            <p class='text-secondary mt-1' style="font-size: 0.8em;">${el.artist.name}</p>
          </div>
          <div class="d-flex align-items-center">

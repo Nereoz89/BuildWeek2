@@ -251,7 +251,7 @@ const generateTracks = (tracks) => {
 
       const content = document.createElement("div");
       content.classList.add("d-flex", "align-items-center");
-      content.innerHTML = `
+      content.innerHTML = `<div><p>${index + 1}</p></div>
     <div class="col col-md-8 d-flex justify-content-between">
        <div >
          <h6 class="mb-4 ms-4 pe-3">${el.title}</h6>
