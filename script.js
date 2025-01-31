@@ -15,6 +15,7 @@ let artistArr = [
   "oasis",
   "coldplay",
   "muse",
+  "u2",
 ];
 
 const getRandomString = (array) => {
