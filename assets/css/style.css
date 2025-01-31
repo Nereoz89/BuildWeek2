@@ -2,13 +2,6 @@
 
 @font-face {
   font-family: "Circular";
-  src: url("/assets/fonts/CircularStd-Regular.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Circular";
   src: url("/assets/fonts/CircularStd-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
