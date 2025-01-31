@@ -95,7 +95,7 @@ const generateTracks = (tracks) => {
     content.querySelector(".detailPlayer").addEventListener("click", () => {
       document.getElementById("playerTitle").textContent = el.title;
       document.getElementById("playerArtist").textContent = el.artist.name;
-      playerImg.innerHTML = `<img src="${el.album.cover_medium}" style="max-height: 5em; margin-right: 10px;" />`;
+      playerImg.innerHTML = `<img src="${el.album.cover_medium}" style="max-height: 3em; margin-right: 10px;" />`;
       document.getElementById("playerDuration").textContent = `${Math.floor(el.duration / 60)}:${seconds}`;
 
       document.getElementById("playButton").addEventListener("click", () => {
