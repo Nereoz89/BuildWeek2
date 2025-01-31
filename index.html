@@ -209,12 +209,12 @@
             >
               <div class="row">
                 <div class="col-12 col-md-6 col-xl-3">
-                  <div class="overflow-hidden" style="padding: 1em">
+                  <div class="overflow-hidden" style="padding: 1em; height: 100%">
                     <img
                       src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg"
                       alt="Fedez"
                       class="img-fluid"
-                      style="object-fit: cover; height: 100%"
+                      style="object-fit: cover; width: 100%; height: 100%"
                     />
                   </div>
                 </div>
@@ -225,8 +225,10 @@
 
                   <p>Fedez, Salmo</p>
                   <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
-                  <button type="button" class="colorSpotifyBack btn rounded-pill text-dark px-4 p-2 me-2">Play</button>
-                  <button type="button" class="btn btn-outline-secondary rounded-pill text-white px-4 p-2 me-2">
+                  <button type="button" class="colorSpotifyBack btn rounded-pill text-dark mb-1 px-4 p-2 me-2">
+                    Play
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary rounded-pill text-white mb-1 px-4 p-2 me-2">
                     Salva
                   </button>
                   <span>
@@ -246,7 +248,7 @@
                 </div>
                 <div class="col-12 col-xl-2 d-none d-xl-block">
                   <div style="margin-left: auto">
-                    <p class="bg-dark text-white rounded-pill p-1 mt-3 px-4">Nascondi Annunci</p>
+                    <p class="bg-dark text-white rounded-pill text-center mt-3">Nascondi Annunci</p>
                   </div>
                 </div>
               </div>
@@ -451,38 +453,33 @@
     </footer>
     <footer class="music-player-mobile d-flex d-md-none bg-dark text-white py-2 px-3">
       <div class="d-flex justify-content-between align-items-center w-100">
-        
         <!-- Cover + Dettagli Canzone Affiancati -->
         <div class="d-flex justify-content-start align-items-center mt-2">
-        <div class="song-details d-flex align-items-center justify-content-start gap-2 w-100">
-          <img src="assets/imgs/main/image-11.jpg" alt="Cover" class="song-cover">
+          <div class="song-details d-flex align-items-center justify-content-start gap-2 w-100">
+            <img src="assets/imgs/main/image-11.jpg" alt="Cover" class="song-cover" />
           </div>
           <div>
             <h6 class="song-title m-0">Nome Canzone</h6>
           </div>
         </div>
-    
+
         <!-- Icone a Destra -->
         <div class="right-icons d-flex align-items-center gap-3">
           <button class="btn text-white">
             <i class="bi bi-music-player" style="font-size: 1.5rem"></i>
           </button>
-    
+
           <button class="btn text-white" id="heart-icon">
             <i class="bi bi-heart" style="font-size: 1.5rem"></i>
             <i class="bi bi-heart-fill" style="font-size: 1.5rem; display: none"></i>
           </button>
-    
+
           <button class="btn play-btn text-white" id="play-icon">
             <i class="bi bi-play-fill" style="font-size: 2rem"></i>
           </button>
         </div>
       </div>
     </footer>
-    
-    
-    
-    
 
     <script>
       document.getElementById("heart-icon").addEventListener("click", function () {

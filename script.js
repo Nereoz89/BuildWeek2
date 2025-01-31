@@ -57,53 +57,36 @@ const generateCards = (album) => {
   album.data.forEach((el, index) => {
     if (index < 18) {
       const newCol = document.createElement("div");
-      newCol.classList.add(
-        "col-12",
-        "col-sm-6",
-        "col-md-4",
-        "col-lg-2",
-        "my-2",
-        "p-1",
-        "d-flex",
-        "justify-content-center"
-      );
-      newCol.innerHTML = `
-    <div class="card h-100 border-0 p-3" id="albumCard" ">
-        <img src="${el.album.cover_big}" class="card-img-top img-fluid" alt="img-${index}">
-        <div class="card-body d-flex flex-column justify-content-between px-0">
-            <div>
-            <h6 class="card-title"><a class="text-decoration-none text-white" href="album.html?albumId=${el.album.id}">${el.album.title}</a></h6>
-            </div>
-            <div>
-          <p class="card-text">
-            <a class="text-decoration-none" href="artist.html?artistId=${el.artist.id}" style="font-size: 0.7rem; color: #808080;">${el.artist.name}</a>
-          </p>
+      newCol.classList.add("col-12", "col-md-4", "col-lg-2", "my-2", "p-1", "d-flex", "justify-content-center");
 
-            
-            </div>
-            
+      newCol.innerHTML = `
+      <div class="card h-100 border-0 p-3" id="albumCard" style="height: 350px;">
+        <div class="row g-0 d-flex align-items-center h-100">
+          <!-- Colonna per l'immagine -->
+          <div class="col-4 col-md-12 d-flex justify-content-center mb-2 mb-md-0">
+            <img src="${el.album.cover_big}" class="card-img-top img-fluid mb-md-3 pe-5 pe-md-0" alt="img-${index}" style="object-fit: cover; height: 100%;">
+          </div>
+          <!-- Colonna per il contenuto (testo) -->
+          <div class="col-8 col-md-12 d-flex flex-column justify-content-between align-items-start px-0 text-center text-md-start">
+            <h6 class="card-title mb-1">
+              <a class="text-decoration-none text-white" href="album.html?albumId=${el.album.id}">
+                ${el.album.title}
+              </a>
+            </h6>
+            <p class="card-text mb-1">
+              <a class="text-decoration-none" href="artist.html?artistId=${el.artist.id}" style="font-size: 0.7rem; color: #808080;">
+                ${el.artist.name}
+              </a>
+            </p>
+          </div>
         </div>
-    </div>
-      `;
+      </div>
+    `;
+
       myRow.appendChild(newCol);
     }
   });
 };
-
-// Cambio del titolo in un paragrafo su schermi medi
-const title = document.getElementById("album-title");
-const paragraph = document.getElementById("album-paragraph");
-
-function checkScreenSize() {
-  if (window.innerWidth < 992) {
-    // A partire da schermi md
-    title.classList.add("d-none");
-    paragraph.classList.remove("d-none");
-  } else {
-    title.classList.remove("d-none");
-    paragraph.classList.add("d-none");
-  }
-}
 
 window.addEventListener("resize", checkScreenSize);
 checkScreenSize(); // Inizializza al caricamento
