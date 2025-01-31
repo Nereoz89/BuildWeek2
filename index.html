@@ -208,19 +208,20 @@
               "
             >
               <div class="row">
-                <div class="col-4 col-md-4">
+                <div class="col-12 col-md-6 col-xl-3">
                   <div class="overflow-hidden" style="padding: 1em">
                     <img
                       src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg"
                       alt="Fedez"
                       class="img-fluid"
-                      style="object-fit: cover"
+                      style="object-fit: cover; height: 100%"
                     />
                   </div>
                 </div>
-                <div class="col-5 col-md-5">
+                <div class="col-12 col-md-6 col-xl-7">
                   <p class="mt-2">ALBUM</p>
-                  <h5 class="fw-bold">VIOLA (feat. Salmo)</h5>
+                  <h5 class="fw-bold d-none d-lg-block" id="album-title">VIOLA (feat. Salmo)</h5>
+                  <p class="fw-bold d-lg-none" id="album-paragraph">VIOLA (feat. Salmo)</p>
 
                   <p>Fedez, Salmo</p>
                   <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
@@ -243,7 +244,7 @@
                     </svg>
                   </span>
                 </div>
-                <div class="col-3 col-md-none">
+                <div class="col-12 col-xl-2 d-none d-xl-block">
                   <div style="margin-left: auto">
                     <p class="bg-dark text-white rounded-pill p-1 mt-3 px-4">Nascondi Annunci</p>
                   </div>
@@ -448,30 +449,40 @@
         </div>
       </div>
     </footer>
-
     <footer class="music-player-mobile d-flex d-md-none bg-dark text-white py-2 px-3">
       <div class="d-flex justify-content-between align-items-center w-100">
-        <div class="song-details">
-          <h6 class="song-title m-0">Nome Canzone</h6>
-          <p class="song-artist m-0 text-muted" style="font-size: 0.85rem">Nome Artista</p>
+        
+        <!-- Cover + Dettagli Canzone Affiancati -->
+        <div class="d-flex justify-content-start align-items-center mt-2">
+        <div class="song-details d-flex align-items-center justify-content-start gap-2 w-100">
+          <img src="assets/imgs/main/image-11.jpg" alt="Cover" class="song-cover">
+          </div>
+          <div>
+            <h6 class="song-title m-0">Nome Canzone</h6>
+          </div>
         </div>
-
+    
+        <!-- Icone a Destra -->
         <div class="right-icons d-flex align-items-center gap-3">
           <button class="btn text-white">
             <i class="bi bi-music-player" style="font-size: 1.5rem"></i>
           </button>
-
+    
           <button class="btn text-white" id="heart-icon">
             <i class="bi bi-heart" style="font-size: 1.5rem"></i>
             <i class="bi bi-heart-fill" style="font-size: 1.5rem; display: none"></i>
           </button>
-
+    
           <button class="btn play-btn text-white" id="play-icon">
             <i class="bi bi-play-fill" style="font-size: 2rem"></i>
           </button>
         </div>
       </div>
     </footer>
+    
+    
+    
+    
 
     <script>
       document.getElementById("heart-icon").addEventListener("click", function () {
