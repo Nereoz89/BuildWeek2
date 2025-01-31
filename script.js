@@ -1,7 +1,32 @@
 // RINTRACCIO LA ROW TARGET
 const myRow = document.getElementById("mainRow");
 
-const url = "https://deezerdevs-deezer.p.rapidapi.com/search?q=ac-dc";
+let artistArr = [
+  "ac-dc",
+  "queen",
+  "pink-floyd",
+  "led-zeppelin",
+  "the-rolling-stones",
+  "nirvana",
+  "metallica",
+  "guns-n-roses",
+  "bob-dylan",
+  "the-who",
+  "oasis",
+  "coldplay",
+  "muse",
+  "u2",
+];
+
+const getRandomString = (array) => {
+  const randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+};
+
+const randomString = getRandomString(artistArr);
+console.log(randomString);
+
+const url = "https://deezerdevs-deezer.p.rapidapi.com/search?q=" + randomString;
 const options = {
   method: "GET",
   headers: {
@@ -30,7 +55,7 @@ fetch(url, options)
 
 const generateCards = (album) => {
   album.data.forEach((el, index) => {
-    if (index < 15) {
+    if (index < 18) {
       const newCol = document.createElement("div");
       newCol.classList.add(
         "col-12",
