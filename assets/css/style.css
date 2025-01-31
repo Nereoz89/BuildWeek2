@@ -340,3 +340,16 @@ div > h5 {
   color: white;
   outline: none; /* Per rimuovere il bordo che appare quando l'input è selezionato */
 }
+
+/* imagine fedez e viola  */
+/* .overflow-hidden img {
+  width: auto;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .col-4 img {
+    width: auto;
+    height: 100%;
+  }
+}
+ */

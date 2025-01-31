@@ -65,3 +65,20 @@ const generateCards = (album) => {
   });
 };
 
+// Cambio del titolo in un paragrafo su schermi medi
+const title = document.getElementById("album-title");
+const paragraph = document.getElementById("album-paragraph");
+
+function checkScreenSize() {
+  if (window.innerWidth < 992) {
+    // A partire da schermi md
+    title.classList.add("d-none");
+    paragraph.classList.remove("d-none");
+  } else {
+    title.classList.remove("d-none");
+    paragraph.classList.add("d-none");
+  }
+}
+
+window.addEventListener("resize", checkScreenSize);
+checkScreenSize(); // Inizializza al caricamento
