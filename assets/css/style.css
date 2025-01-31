@@ -347,3 +347,23 @@ div > h5 {
   color: white;
   outline: none; /* Per rimuovere il bordo che appare quando l'input è selezionato */
 }
+
+.song-details {
+  display: flex;
+  align-items: center; /* Allinea verticalmente l'immagine e il testo */
+  gap: 10px; /* Spazio tra immagine e testo */
+}
+
+.song-cover {
+  width: 45px; /* Imposta la dimensione della cover */
+  height: 45px;
+  object-fit: cover; /* Rende la cover con il formato corretto */
+  border-radius: 8px; /* Bordi arrotondati */
+}
+
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
